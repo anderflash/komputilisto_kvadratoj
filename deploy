@@ -1,0 +1,2 @@
+#!/bin/sh
+rsync --checksum --delete -ave 'ssh' ./* acmt@pizza.ime.usp.br:www/komputilisto
