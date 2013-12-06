@@ -1,0 +1,161 @@
+<html>
+  <meta charset="UTF-8">
+  <head>  
+  	<!-- styles needed by jScrollPane -->
+		<link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<link type="text/css" href="css/custom.css" rel="stylesheet" media="all" />
+
+		<!-- latest jQuery direct from google's CDN -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+		</script>
+
+		<!-- the mousewheel plugin - optional to provide mousewheel support -->
+		<script type="text/javascript" src="assets/js/jquery.mousewheel.js"></script>
+
+		<!-- the jScrollPane script -->
+		<script type="text/javascript" src="assets/js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" src="assets/js/custom.js"></script>
+		
+    $mathjax$
+        
+	<script type="text/javascript">
+	//<![CDATA[
+	  (function() {
+	    var shr = document.createElement('script');
+	    shr.setAttribute('data-cfasync', 'false');
+	    shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+	    shr.type = 'text/javascript'; shr.async = 'true';
+	    shr.onload = shr.onreadystatechange = function() {
+	      var rs = this.readyState;
+	      if (rs && rs != 'complete' && rs != 'loaded') return;
+	      var apikey = 'a90fae8b3b87717b1a083a5abb334088';
+	      try { Shareaholic.init(apikey); } catch (e) {}
+	    };
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(shr, s);
+	  })();
+	//]]>
+	</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-5512691-10', 'usp.br');
+	  ga('send', 'pageview');
+
+	</script>
+
+  </head>
+  <body>
+		<div class="content">
+			<div class="category tilesW5">
+				<div class="categorytitle">
+				  Blogo
+				</div>
+				<div class="categoryPaginator">
+					<div class="back"></div>
+					<div class="page">15</div>
+					<div class="forward"></div>
+				</div>
+				<div class="tiles">
+					$body$
+				</div>
+			</div>
+			<div class="category tilesW4">
+				<div class="categorytitle">
+					Lernado
+				</div>
+				<div class="tiles">
+					<div class="tile tileW1 tileH1">
+						<img src="assets/images/muzaiko_logo.svg"/>
+					</div>
+					<div class="tile tileW1 tileH1" style="background:#aa0000;">
+						<img src="assets/images/webgl-logo.svg"/>
+					</div>
+					<div class="tile tileW1 tileH1" style="background:#384f6f;">
+					<img src="assets/images/lernu_logo.svg"/>
+					</div>
+					<div class="tile tileW1 tileH1" style="background:#500010">
+					<img src="assets/images/muzaiko_logo.svg"/>
+					</div>
+					<div class="tile tileW1 tileH1">
+					Teste5
+					</div>
+				</div>
+      </div>
+			<div class="category tilesW4">
+				<div class="categorytitle">
+					Programaroj
+				</div>
+				<div class="tiles">
+					<div class="tile tileW1 tileH2">
+					Teste1
+					</div>
+					<div class="tile tileW1 tileH1">
+					Teste2
+					</div>
+					<div class="tile tileW1 tileH1">
+					Teste3
+					</div>
+					<div class="tile tileW1 tileH1">
+					Teste4
+					</div>
+					<div class="tile tileW1 tileH1">
+					Teste5
+					</div>
+				</div>
+			</div>
+			<div class="category tilesW4">
+				<div class="categorytitle">
+					Pri Mi
+				</div>
+				<div class="tiles">
+					<div class="tile tileW1 tileH1">
+						<img src="assets/images/twitter_logo.svg"/>
+					</div>
+					<div class="tile tileW1 tileH1">
+						<img src="assets/images/facebook_logo.svg"/>
+					</div>
+					<div class="tile tileW1 tileH1">
+						<img src="assets/images/gplus_logo.svg"/>
+					</div>
+					<div class="tile tileW1 tileH1">
+						Teste4
+					</div>
+					<div class="tile tileW1 tileH1">
+						Teste5
+					</div>
+				</div>
+			</div>
+			<div class="category tilesW4">
+				<div class="categorytitle">
+					Projektoj
+				</div>
+				<div class="tiles">
+					<div class="tile tileW1 tileH1">
+						<img src="assets/images/nhe-thumb.jpg" style="width:64px; height:64px;"/>
+					</div>
+					<div class="tile tileW1 tileH1">
+						<img src="assets/images/eye-tracking-thumb.jpg" style="width:64px; height:64px;"/>
+					</div>
+					<div class="tile tileW1 tileH1">
+						<img src="assets/images/anamorphism-swimming.jpg" style="width:64px; height:64px;"/>
+					</div>
+					<div class="tile tileW1 tileH1">
+						Teste4
+					</div>
+					<div class="tile tileW1 tileH1">
+						Teste5
+					</div>
+				</div>
+			</div>
+		</div>
+    <div class="top">
+      <div class="logo">
+      </div>
+    </div>
+    <footer class="copyright">Farita de <a href="http://www.ime.usp.br/~acmt" target="_blank">Anderson Tavares</a> - 2013 <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></footer>
+  </body>
+</html>

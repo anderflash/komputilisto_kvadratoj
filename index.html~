@@ -1,351 +1,359 @@
 <html>
   <meta charset="UTF-8">
   <head>  
-    <style>
-      body
-      {
-	font-family:'Helvetica Neue',Helvetica, Arial, sans-serif;
-	color:white;
-	background:url('assets/images/fono2_566.jpg') no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	text-shadow: 1px 1px 1px black;
-	margin:0px;
-	
-	font-size:10pt;
-	
-	
-	height:100%;
-      }
-      a:visited
-      {
-	color:gray;
-      }
-      a:hover
-      {
-	color:red;
-      }
-      a:active
-      {
-	color:white;
-      }
-      .content
-      {
-	display:inline-block;
-	position:absolute;
-	top:30px;
-	float:left
-      }
-      .category
-      {
-	margin-right:16px;
-	display:inline-block;
-	vertical-align:top;
-	max-height:100%;
-	float:left
-      }
-      
-      .categoryPaginator
-      {
-	float:right;
-	margin-top:-34px;
-	
-	display:inline-block;
-      }
-      .category .back,
-      .category .page,
-      .category .forward
-      {
-	width:30px;
-	height:27px;
-	display:inline-block;
-	text-align:center;
-	font-size:15pt;
-	vertical-align:middle;
-	padding-top:3px;
-      }
-      .category .back,
-      .category .forward
-      {
-	cursor:hand;
-	cursor:pointer;
-	background:darkred;
-      }
-      .category .forward
-      {
-	background:url("assets/images/forward.svg")
-      }
-      .category .back
-      {
-	background:url("assets/images/back.svg")
-      }
-      .category .back:hover,
-      .category .forward:hover
-      {
-	box-shadow: 0px 0px 3px 2px white;
-      }
-      
-      .categoryTitle
-      {
-	padding-left:4px;
-	padding-bottom:4px;
-	font-size:30;
-      }
-      .tiles
-      {
-	display:inline-block;
-      }
-	.postContent section
-	{
-		overflow-y:scroll;
-		overflow-x:hidden;
+  	<!-- styles needed by jScrollPane -->
+		<link type="text/css" href="assets/css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+
+		<!-- latest jQuery direct from google's CDN -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+		</script>
+
+		<!-- the mousewheel plugin - optional to provide mousewheel support -->
+		<script type="text/javascript" src="script/jquery.mousewheel.js"></script>
+
+		<!-- the jScrollPane script -->
+		<script type="text/javascript" src="script/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript">
+		$(function()
+		{
+			$('.scroll-pane').jScrollPane();
+		});
+		var currentPost = null;
+		function postHeaderClicked(event)
+		{
+			postHeader = $(event.currentTarget);
+			post = postHeader.parent();
+			postContent = post.children("div.postContent")[0];
+			if(postContent.style.display == "block")
+			{
+				console.log("colapsando");
+				collapsePost(post, postContent);
+			}
+			else
+			{
+				expandPost(post, postContent);
+			}
+		}
+		function expandPost(post, postContent)
+		{
+			collapseCurrentPost();
+			post.removeClass("tileH1");
+			post.addClass("tileH10");
+			postContent.style.display = "block";
+			$(postContent).jScrollPane();
+			currentPost = postContent;
+		}
 		
-	}
+		function collapsePost(post, postContent)
+		{
+			if(post != null)
+			{
+				post.removeClass("tileH10");
+				post.addClass("tileH1");
+				postContent.style.display = "none";
+				$(postContent).jScrollPane();
+			}
+			if(currentPost == postContent)
+				currentPost = null;
+		}
+		
+		function collapseCurrentPost()
+		{
+			if(currentPost)
+				collapsePost(currentPost.parent(), currentPost);
+		}
+		</script>
+    <style>
+			body
+			{
+				font-family:'Helvetica Neue',Helvetica, Arial, sans-serif;
+				color:white;
+				background:url('assets/images/fono2_566.jpg') no-repeat center center fixed;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				text-shadow: 1px 1px 1px black;
+				margin:0px;
+
+				font-size:10pt;
+				height:100%;
+			}
+			a:visited
+			{
+			color:gray;
+			}
+			a:hover
+			{
+			color:red;
+			}
+			a:active
+			{
+			color:white;
+			}
+			.content
+			{
+				display:inline-block;
+				position:absolute;
+				top:30px;
+				float:left
+			}
+			.category
+			{
+				margin-right:16px;
+				display:inline-block;
+				vertical-align:top;
+				max-height:100%;
+				float:left
+			}
+
+			.categoryPaginator
+			{
+				float:right;
+				margin-top:-34px;
+
+				display:inline-block;
+			}
+			.category .back,
+			.category .page,
+			.category .forward
+			{
+				width:30px;
+				height:27px;
+				display:inline-block;
+				text-align:center;
+				font-size:15pt;
+				vertical-align:middle;
+				padding-top:3px;
+			}
+			.category .back,
+			.category .forward
+			{
+				cursor:hand;
+				cursor:pointer;
+				background:darkred;
+			}
+			.category .forward
+			{
+				background:url("assets/images/forward.svg")
+			}
+			.category .back
+			{
+				background:url("assets/images/back.svg")
+			}
+			.category .back:hover,
+			.category .forward:hover
+			{
+				box-shadow: 0px 0px 3px 2px white;
+			}
+
+			.categoryTitle
+			{
+				padding-left:4px;
+				padding-bottom:4px;
+				font-size:30;
+			}
+			.tiles
+			{
+				display:inline-block;
+			}
+			
+			.logo
+			{
+				display:inline-block;
+				background:url(logotipo.png) no-repeat 5px 5px;
+				background-size: auto 20px;
+				height:20px;
+				width:98px;
+				padding:5px;
+				border:0px;
+				margin:0px;
+				vertical-align:middle;
+				cursor:hand;
+				cursor:pointer;
+			}
+			.top
+			{
+				display:inline;
+				position:fixed;
+				min-width:100%;
+				max-width:100%;
+				background-color:transparent;
+				background-color:rgba(0,0,0,0.4);
+				margin:0px auto;
+				border:0px;
+				padding:0px;
+				top:0px;
+				left:0px;
+				cursor:auto;
+			}
+			.tile
+			{
+				background:blue;
+				margin-bottom:4px;
+				margin-left:4px;
+				display:inline-block;
+				float:left;
+			}
+			.postContent p
+			{
+				word-break:break-word;
+			}
+			.postContent ul li
+			{
+				margin:0px;
+				padding:0px;
+			}
+			.postContent ul
+			{
+				-webkit-padding-start:20px;
+			}
+			.jspVerticalBar
+			{
+				width:5px;
+			}
+			
+			.jspDrag
+			{
+				background:darkred;
+			}
+			.jspTrack
+			{
+				background:burlywood;
+			}
       
-      .logo
-      {
-	display:inline-block;
-	background:url(logotipo.png) no-repeat 5px 5px;
-	background-size: auto 20px;
-	height:20px;
-	width:98px;
-	padding:5px;
-	border:0px;
-	margin:0px;
-	vertical-align:middle;
-	cursor:hand;
-	cursor:pointer;
-      }
-      .top
-      {
-	display:inline;
-	position:fixed;
-	min-width:100%;
-	max-width:100%;
-	background-color:transparent;
-	background-color:rgba(0,0,0,0.4);
-	margin:0px auto;
-	border:0px;
-	padding:0px;
-	top:0px;
-	left:0px;
-	cursor:auto;
-      }
-      .tile
-      {
-	background:blue;
-	margin-bottom:4px;
-	margin-left:4px;
-	display:inline-block;
-	float:left;
-      }
+      .tileW1 {width:64px; }
+      .tileW2 {width:132px;}
+      .tileW3 {width:200px;}
+      .tileW4 {width:268px;}
+      .tileW5 {width:336px;}
       
+      .tilesW1{width:68px; }
+      .tilesW2{width:136px;}
+      .tilesW3{width:204px;}
+      .tilesW4{width:272px;}
+      .tilesW5{width:340px;}
       
+      .tileH1 {height:64px;	max-height:64px; }
+      .tileH2 {height:132px;max-height:132px;}
+      .tileH3 {height:200px;max-height:200px;}
+      .tileH4 {height:268px;max-height:268px;}
+      .tileH5 {height:336px;max-height:336px;}
+      .tileH6 {height:404px;max-height:404px;}
+      .tileH7 {height:472px;max-height:472px;}
+      .tileH8 {height:540px;max-height:540px;}
+      .tileH9 {height:608px;max-height:608px;}
+      .tileH10{height:676px;max-height:676px;}
       
-      .tileW1
-      {
-	width:64px;
-      }
-      .tileW2
-      {
-	width:132px;
-      }
-      .tileW3
-      {
-	width:200px;
-      }
-      .tileW4
-      {
-	width:268px;
-      }
-      .tileW5
-      {
-	width:336px;
-      }
-      
-      
-      .tilesW1
-      {
-	width:68px;
-      }
-      .tilesW2
-      {
-	width:136px;
-      }
-      .tilesW3
-      {
-	width:204px;
-      }
-      .tilesW4
-      {
-	width:272px;
-      }
-      .tilesW5
-      {
-	width:340px;
-      }
-      
-      .tileH1
-      {
+			.postThumbnail
+			{
 				height:64px;
-				max-height:64px;
-      }
-      .tileH2
-      {
-					height:132px;
-					max-height:132px;
+				background:green;
+				display:inline-block;
+				margin:0px;
+				padding:0px;
+				width:64px;
+			}
 
-      }
-      .tileH3
-      {
-	height:200px;
-					max-height:200px;
+			.post
+			{
+				display:inline-block;
+				background:brown;
+				padding-left:0px;
+				vertical-align:top;
+			}
+			.postHeader
+			{
+				display:inline-block;
+				background:brown;
+				padding-left:0px;
+				vertical-align:top;
+				height:64px;
+				cursor:hand;
+				cursor:pointer;
+			}
+			.postHeader:hover
+			{
+				box-shadow: 0px 0px 3px 2px white;
+			}
 
-      }
-      .tileH4
-      {
-	height:268px;
-					max-height:268px;
-
-      }
-      .tileH5
-      {
-	height:336px;
-					max-height:336px;
-
-      }
-      .tileH6
-      {
-	height:404px;
-					max-height:404px;
-
-      }
-      .tileH7
-      {
-	height:472px;
-	max-height:472px;
-      }
-      .tileH8
-      {
-	height:540px;
-	max-height:540px;
-      }
-      .tileH9
-      {
-	height:608px;
-	max-height:608px;
-      }
-      .tileH10
-      {
-	height:676px;
-	max-height:676px;
-      }
-      
-      .postThumbnail
-      {
-	height:64px;
-	background:green;
-	display:inline-block;
-	margin:0px;
-	padding:0px;
-	width:64px;
-      }
-      
-      .post
-      {
-	display:inline-block;
-	background:brown;
-	padding-left:0px;
-	vertical-align:top;
-      }
-      .postHeader
-      {
-	display:inline-block;
-	background:brown;
-	padding-left:0px;
-	vertical-align:top;
-	height:64px;
-	cursor:hand;
-	cursor:pointer;
-      }
-      .postHeader:hover
-      {
-	box-shadow: 0px 0px 3px 2px white;
-      }
-      
-      .postThumbnail img
-      {
-	max-width:100%; max-height:100%;
-	min-width:100%; min-height:100%;
-      }
-      .postTitle
-      {
-	font-size:11pt;
-	font-weight:bold;
-	text-align:center;
-	width:228px;
-	display:inline-block;
-      }
-      .postDescription
-      {
-	width:228px;
-	display:inline-block;
-	vertical-align:middle;
-	float:left;
-	height:45px;
-	white-space: initial;
-	margin-top:-4px;
-      }
-      .postContent
-      {
+			.postThumbnail img
+			{
+				max-width:100%; max-height:100%;
+				min-width:100%; min-height:100%;
+			}
+			.postTitle
+			{
+				font-size:11pt;
+				font-weight:bold;
+				text-align:center;
+				width:228px;
+				display:inline-block;
+			}
+			.postDescription
+			{
+				width:228px;
+				display:inline-block;
+				vertical-align:middle;
+				float:left;
+				height:45px;
+				white-space: initial;
+				margin-top:-4px;
+			}
+			.postContent
+			{
 				background:beige;
 				color:darkred;
 				text-shadow:none;
-      }
-      .postDate
-      {
-	float:right;
-	vertical-align:middle;
-	width:32px;
-	text-align:center;
-	display:inline-block;
-	white-space:nowrap;
-	background:darkred;
-      }
-      .month, .day, .year
-      {
-	vertical-align:middle;
-	display:inline-block;
-	width:32px;
-	float:right;
-      }
-      .month
-      {
-	height:20px;
-      }
-      .day
-      {
-	height:24px;
-	font-size:14pt;
-      }
-      .year
-      {
-	height:20px;
-      }
-      footer
-      {
-	bottom:5px;
-	right:5px;
-	position:fixed;
-	vertical-align:middle;
-	display:inline-block;
-      }
-      footer a
-      {
-	color:white;
-      }
+				display:none;
+			}
+			.postDate
+			{
+				float:right;
+				vertical-align:middle;
+				width:32px;
+				text-align:center;
+				display:inline-block;
+				white-space:nowrap;
+				background:darkred;
+			}
+			.month, .day, .year
+			{
+				vertical-align:middle;
+				display:inline-block;
+				width:32px;
+				float:right;
+			}
+			.month
+			{
+				height:20px;
+			}
+			.day
+			{
+				height:24px;
+				font-size:14pt;
+			}
+			.year
+			{
+				height:20px;
+			}
+			footer
+			{
+				bottom:5px;
+				right:5px;
+				position:fixed;
+				vertical-align:middle;
+				display:inline-block;
+			}
+			footer a
+			{
+				color:white;
+			}
+			
+			.scroll-pane
+			{
+				overflow:auto;
+			}
       
     </style>
   </head>
@@ -379,8 +387,8 @@
 	      </div>
 	     </div>
 	  </div>
-	  <div class="tile tileW5 tileH10">
-	    <div class="postHeader">
+	  <div class="tile tileW5 tileH1">
+	    <div class="postHeader" onclick="postHeaderClicked(event)">
 	      <div class="postThumbnail">
 	      <img src="assets/images/webgl-texture-thumb.png" alt="NHE"/>
 	      </div>
@@ -396,8 +404,8 @@
 		</div>
 	      </div>
 	     </div>
-	     <div class="postContent tileH9">
-					<section class="tileH9" itemprop="articleBody">
+	     <div class="postContent tileH9 tileW5 scroll-pane jspScrollable">
+					<!--<section class="tileH9" itemprop="articleBody">-->
 								<h1 id="introdução">Introdução</h1>
 						<p>Rastreamento do olhar é uma área em desenvolvimento</p>
 						<p>Dependendo da taxa de amostragem do equipamento e da aplicação pretendida, a quantidade de dados coletados poder ser muito grande para sua análise. Nesse caso é necessária uma transformação destes dados em eventos que informem melhor o processamento visual e cognitivo durante o experimento.</p>
@@ -548,7 +556,7 @@
 				
 								<h1></h1>
 				
-								</section>
+								<!--</section>-->
 					<!--Como colocar textura em objetos
 					Fazendo tudo<br>
 					<ul>
@@ -557,6 +565,7 @@
 					</ul>
 					Faça agora isso, ok? Estamos testando o parágrafo para ver se fica interessante. Parece que sim
 					acesse <a href="http://www.google.com" target="_blank">Google</a>-->
+						
 	     </div>
 	  </div>
 	  <div class="tile tileW5 tileH1">
@@ -646,14 +655,14 @@
 					Pri Mi
 				</div>
 				<div class="tiles">
-					<div class="tile tileW1 tileH2">
+					<div class="tile tileW1 tileH1">
 						<img src="svg/twitter_logo.svg"/>
 					</div>
 					<div class="tile tileW1 tileH1">
 						<img src="svg/facebook_logo.svg"/>
 					</div>
 					<div class="tile tileW1 tileH1">
-						Teste3
+						<img src="svg/gplus_logo.svg"/>
 					</div>
 					<div class="tile tileW1 tileH1">
 						Teste4

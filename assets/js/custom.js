@@ -1,0 +1,52 @@
+$(function()
+		{
+			$('.scroll-pane').jScrollPane();
+		});
+		var currentPost = null;
+		function postHeaderClicked(event, url)
+		{
+			console.log(url);
+			postHeader = $(event.currentTarget);
+			post = postHeader.parent();
+			postContent = post.children("div.postContent")[0];
+			if(postContent.style.display == "block")
+			{
+				console.log("colapsando");
+				collapsePost(post, $(postContent));
+			}
+			else
+			{
+				$(postContent).load("./"+url,null, function(html){expandPost(post, $(postContent));});
+			}
+		}
+		function expandPost(post, postContent)
+		{
+			collapseCurrentPost();
+			post.removeClass("tileH1");
+			post.addClass("tileH10");
+			postContent[0].style.display = "block";
+			postContent.jScrollPane({ autoReinitialise: true });
+			//postContent.find("article").jScrollPane();
+			//postContent.find("section").jScrollPane();
+			console.log(postContent.find("section"));
+			currentPost = postContent;
+		}
+		
+		function collapsePost(post, postContent)
+		{
+			if(post != null)
+			{
+				post.removeClass("tileH10");
+				post.addClass("tileH1");
+				postContent[0].style.display = "none";
+				postContent.jScrollPane();
+			}
+			if(currentPost == postContent)
+				currentPost = null;
+		}
+		
+		function collapseCurrentPost()
+		{
+			if(currentPost)
+				collapsePost(currentPost.parent(), currentPost);
+		}

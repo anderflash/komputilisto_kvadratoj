@@ -1,0 +1,21 @@
+<div class="tile tileW5 tileH1">
+	<div class="postHeader" onclick="postHeaderClicked(event, '$url$')">
+    <div class="postThumbnail">
+    	<img src="$thumbnail$" alt="$title$"/>
+    </div>
+    <div class="post tileW4 tileH1">
+			<div class="postTitle">
+				$title$
+			</div>
+			<div class="postDate">
+				<div class="month">$date.month$</div><div class="day">$date.day$</div><div class="year">$date.year$</div>
+			</div>
+			<div class="postDescription">
+				$description$
+			</div>
+		</div>
+	</div>
+  <div class="postContent tileH9 tileW5 scroll-panel">
+		
+  </div>
+</div>
