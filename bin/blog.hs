@@ -1,4 +1,4 @@
-{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE OverloadedStrings, FlexibleInstances, UndecidableInstances, OverlappingInstances #-}
 module Main where
 
 import Control.Monad (liftM)
@@ -21,7 +21,7 @@ main = hakyllWith config $ do
     -- Build tags
      
     -- tags <- buildTags (fromRegex "^(blogo/*|research/**)") (fromCapture "tags/*.html")
-    tags <- buildTags ("blogo/*") (fromCapture "tags/*.html". urlEncode)
+    tags <- buildTags ("pt-BR/blogo/*") (fromCapture "tags/*.html". urlEncode)
 
     -- Compress CSS
     match "assets/css/*" $ do
@@ -44,7 +44,7 @@ main = hakyllWith config $ do
         compile copyFileCompiler
 
     -- Render posts
-    match "blogo/*" $ do
+    match ("en-GB/blogo/*" .||. "en-GB/blogo/*" .||. "pt-BR/blogo/*") $ do
         route   $ setExtension ".html"
 	compile $ do
 	  item <- getUnderlying
@@ -60,7 +60,7 @@ main = hakyllWith config $ do
             
     
 
-    match "blogo/*" $ version "toc" $
+    match ("en-GB/blogo/*" .||. "en-GB/blogo/*" .||. "pt-BR/blogo/*") $ version "toc" $
        compile $ pandocCompilerWith defaultHakyllReaderOptions
                                     defaultHakyllWriterOptions {
                                         writerTableOfContents = True
@@ -70,25 +70,25 @@ main = hakyllWith config $ do
                                       }
     
                                       
-    match "blogo/*" $ version "epub" $ do
+    {-match "blogo/*" $ version "epub" $ do
         route $ setExtension "epub"
         compile $ do
         body <- getResourceBody
         withItemBody
             (\p -> unsafeCompiler $ writeEPUB (defaultHakyllWriterOptions )  p)
                     (readPandoc body)
-
+                    -}
     -- Render posts list
     create ["index.html"] $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll ("blogo/*" .&&. hasNoVersion)
+            posts <- recentFirst =<< loadAll ("pt-BR/blogo/*" .&&. hasNoVersion)
             itemTpl <- loadBody "templates/archive-item.html"
             list <- applyTemplateList itemTpl postCtx posts
             let archiveCtx = constField "title" "Todos os posts" `mappend`
                              defaultContext
             makeItem list
-                >>= loadAndApplyTemplate "templates/index.html" (mconcat[mathCtx,archiveCtx])
+                >>= loadAndApplyTemplate "templates/index.html" (mconcat[constField "sitePath" "http://vision.ime.usp.br/~acmt/komputilisto",mathCtx,archiveCtx])
 
     -- Static pages
 		{-match "pages/*" $ do
@@ -203,13 +203,13 @@ main = hakyllWith config $ do
     -- Render RSS feed
     create ["rss.xml"] $ do
         route idRoute
-        compile $ loadAllSnapshots ("blogo/*" .&&. hasNoVersion) "content"
+        compile $ loadAllSnapshots ("pt-BR/blogo/*" .&&. hasNoVersion) "content"
             >>= fmap (Prelude.take 10) . recentFirst
             >>= renderRss feedConfiguration feedCtx
 
     create ["atom.xml"] $ do
         route idRoute
-        compile $ loadAllSnapshots ("blogo/*" .&&. hasNoVersion) "content"
+        compile $ loadAllSnapshots ("pt-BR/blogo/*" .&&. hasNoVersion) "content"
             >>= fmap (Prelude.take 10) . recentFirst
             >>= renderAtom feedConfiguration feedCtx
 		
@@ -275,14 +275,37 @@ postCtx = mconcat [ dateField "date.machine" (iso8601DateFormat Nothing)
                   , dateField "date.month" "%b"
                   , dateField "date.year" "%Y"
                   , constField "back" ""
+                  , field "en_GB" (getLangPost "en-GB")
+                  , field "pt_BR" (getLangPost "pt-BR")
+                  , field "eo" (getLangPost "eo")
                   , defaultContext
                   ]
+
+getLangPost :: String -> Item String -> Compiler String
+getLangPost lang item = do
+    metadata <- getMetadata (itemIdentifier item)
+    return $ eliminate (Data.Map.lookup lang metadata)
 
 mathCtx :: Context String
 mathCtx = mconcat
          [field "mathjax" mathjax
          ]
 
+class Nothingish a where
+    nada :: a
+
+instance Nothingish (Maybe a) where
+    nada = Nothing
+    
+instance Nothingish [a] where
+    nada = []
+    
+instance (Num a) => Nothingish a where
+    nada = 0
+    
+eliminate :: (Nothingish a) => Maybe a -> a
+eliminate (Just a) = a
+eliminate Nothing  = nada
                   
 feedCtx :: Context String
 feedCtx = mconcat [ postCtx

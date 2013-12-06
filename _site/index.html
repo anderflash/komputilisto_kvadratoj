@@ -1,25 +1,9 @@
 <html>
   <meta charset="UTF-8">
-  <head>  
-  	<!-- styles needed by jScrollPane -->
-		<link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
-		<link type="text/css" href="css/custom.css" rel="stylesheet" media="all" />
-
-		<!-- latest jQuery direct from google's CDN -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-		</script>
-
-		<!-- the mousewheel plugin - optional to provide mousewheel support -->
-		<script type="text/javascript" src="assets/js/jquery.mousewheel.js"></script>
-
-		<!-- the jScrollPane script -->
-		<script type="text/javascript" src="assets/js/jquery.jscrollpane.min.js"></script>
-		<script type="text/javascript" src="assets/js/custom.js"></script>
-		
-    <script type="text/javascript"
-	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-	</script>
+  <head>
+	<script>var sitePath = "http://vision.ime.usp.br/~acmt/komputilisto/" ;</script>
         
+  <!-- SHAREAHOLIC -->
 	<script type="text/javascript">
 //<![CDATA[
   (function() {
@@ -39,15 +23,45 @@
 //]]>
 </script>
 
+	<!-- CORRECT.LI -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="assets/js/correctliapi.js" type="text/javascript" ></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+		  jQuery("body").correctli({
+			language: 'en',
+			minimumCharacters: '1',
+			maximumCharacters: '200',
+			keyCombination: 'none'
+		  });
+		});
+	</script>
 
+		<!-- JSCROLLPANE -->
+  	<!-- styles needed by jScrollPane -->
+	<link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+	<link type="text/css" href="css/custom.css" rel="stylesheet" media="all" />
+	<!-- latest jQuery direct from google's CDN -->
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+	<!-- the mousewheel plugin - optional to provide mousewheel support -->
+	<script type="text/javascript" src="assets/js/jquery.mousewheel.js"></script>
+	<!-- the jScrollPane script -->
+	<script type="text/javascript" src="assets/js/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+	<!-- MATHJAX -->
+    <script type="text/javascript"
+	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+	<!-- GOOGLE ANALYTICS -->
 	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-5512691-10', 'usp.br');
-	  ga('send', 'pageview');
+		ga('create', 'UA-5512691-10', 'usp.br');
+		ga('send', 'pageview');
 
 	</script>
   </head>
@@ -56,7 +70,7 @@
 			
 			<div class="category tilesW5">
 				<div class="categorytitle" id="categoryBLOGO">
-				  Blogo<div class='shareaholic-canvas' data-app='share_buttons' data-app-id='582717'></div>
+				  Blog<div class='shareaholic-canvas' data-app='share_buttons' data-app-id='582717'></div>
 				</div>
 				<div class="categoryPaginator">
 					<div class="back"></div>
@@ -70,14 +84,19 @@
     	<img src="assets/images/webgl-render-to-texture-thumb.png" alt="Tutorial WebGL: Técnica Render-to-Texture"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Técnica Render-to-Texture
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Dec</div><div class="day">13</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Técnica Render-to-Texture
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -91,14 +110,19 @@
     	<img src="assets/images/webgl-specular-maps-thumb.png" alt="Tutorial WebGL: Mapa de iluminação especular"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Mapa de iluminação especular
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Dec</div><div class="day">12</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Mapa de iluminação especular
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -112,14 +136,19 @@
     	<img src="assets/images/webgl-specular-highlights-thumb.png" alt="Tutorial WebGL: Iluminação especular"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Iluminação especular
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Dec</div><div class="day">11</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Iluminação especular
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -133,14 +162,19 @@
     	<img src="assets/images/webgl-per-fragment-multiple-thumb.png" alt="Tutorial WebGL: Iluminação por fragmento e múltiplos programas"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Iluminação por fragmento e múltiplos programas
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Dec</div><div class="day">10</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Iluminação por fragmento e múltiplos programas
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -154,14 +188,19 @@
     	<img src="assets/images/webgl-point-lighting-thumb.png" alt="Tutorial WebGL: Luz pontual"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Luz pontual
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Dec</div><div class="day">09</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Luz pontual
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -175,14 +214,19 @@
     	<img src="assets/images/webgl-spheres-thumb.png" alt="Tutorial WebGL: Esferas"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Esferas
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Dec</div><div class="day">08</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Esferas
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -196,14 +240,19 @@
     	<img src="assets/images/webgl-loading-world-camera-thumb.png" alt="Tutorial WebGL: Carregando mundo e básico de câmera"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Carregando mundo e básico de câmera
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Dec</div><div class="day">07</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Carregando mundo e básico de câmera
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -217,14 +266,19 @@
     	<img src="assets/images/webgl-improving-code-thumb.png" alt="Tutorial WebGL: Melhorando o código"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Melhorando o código
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Dec</div><div class="day">06</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Melhorando o código
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -238,14 +292,19 @@
     	<img src="assets/images/webgl-depth-transparency-thumb.png" alt="Tutorial WebGL: Buffer de profundidade e transparência"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Buffer de profundidade e transparência
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Dec</div><div class="day">05</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Buffer de profundidade e transparência
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -259,14 +318,19 @@
     	<img src="assets/images/webgl-directional-ambient-light-thumb.png" alt="Tutorial WebGL: Luz direcional e ambiente"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Luz direcional e ambiente
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Dec</div><div class="day">04</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Luz direcional e ambiente
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -280,14 +344,19 @@
     	<img src="assets/images/webgl-keyboard-filter-thumb.png" alt="Tutorial WebGL: Teclado e filtro de texturas"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Teclado e filtro de texturas
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Dec</div><div class="day">03</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Manipulando o teclado e adicionando alguns filtros nas texturas
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -301,14 +370,19 @@
     	<img src="assets/images/mendeley-thumb.jpg" alt="Mendeley: Consertando links dos artigos no .bib exportado"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Mendeley: Consertando links dos artigos no .bib exportado
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Dec</div><div class="day">03</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Removendo as barras invertidas típicas de _escaping_ do LaTeX
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -322,14 +396,19 @@
     	<img src="assets/images/webgl-texture-thumb.png" alt="Tutorial WebGL: Texturas"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Texturas
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Dec</div><div class="day">02</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Aplicação de Texturas aos Objetos
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -343,14 +422,19 @@
     	<img src="assets/images/webgl-real-3d-thumb.png" alt="Tutorial WebGL: Agora é em 3D"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Agora é em 3D
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Dec</div><div class="day">01</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Criando objetos tridimensionais
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -364,14 +448,19 @@
     	<img src="assets/images/webgl-movimentando-triangulo-thumb.png" alt="Tutorial WebGL: Movimentando objetos"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Movimentando objetos
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Nov</div><div class="day">30</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Movimentando objetos
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -385,14 +474,19 @@
     	<img src="assets/images/webgl-colorindo-triangulo-thumb.png" alt="Tutorial WebGL: Colorindo triângulos"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Colorindo triângulos
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Nov</div><div class="day">29</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Colorindo triângulos
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -406,14 +500,19 @@
     	<img src="assets/images/webgl-criando-triangulo-thumb.png" alt="Tutorial WebGL: Criando triângulos"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Criando triângulos
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Nov</div><div class="day">28</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Criando triângulos
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -427,14 +526,19 @@
     	<img src="assets/images/webgl-introducao-thumb.png" alt="Tutorial WebGL: Introdução"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Tutorial WebGL: Introdução
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Nov</div><div class="day">27</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Instalação e Configuração
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -448,14 +552,19 @@
     	<img src="assets/images/livros-abertos-thumb.jpg" alt="Revisão Bibliográfica Sistemática"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Revisão Bibliográfica Sistemática
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Nov</div><div class="day">24</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Sobre Revisão Bibliográfica Sistemática: conceitos, métodos e discussão
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -469,14 +578,19 @@
     	<img src="assets/images/academic-thumb.jpg" alt="Fazendo Meu Blog"/>
     </div>
     <div class="post tileW4 tileH1">
-			<div class="postTitle">
+			<div class="postTitle" id="POSTTITLE2013-11-24-fazendo-meu-blog.md">
 				Fazendo Meu Blog
 			</div>
-			<div class="postDate">
+			<div class="postDate" id="POSTDATE2013-11-24-fazendo-meu-blog.md">
 				<div class="month">Nov</div><div class="day">24</div><div class="year">2013</div>
 			</div>
-			<div class="postDescription">
+			<div class="postDescription" id="POSTDESCRIPTION2013-11-24-fazendo-meu-blog.md">
 				Fiz meu blog
+			</div>
+			<div class="postRelated" hidden>
+			  <div class="en-GB">2013-12-06-making-my-blog.md</div>
+			  <div class="pt-BR">2013-11-24-fazendo-meu-blog.md</div>
+			  <div class="eo">2013-12-06-farinte-mian-blogon.md</div>
 			</div>
 		</div>
 	</div>
@@ -489,7 +603,7 @@
 			</div>
 			<div class="category tilesW4">
 				<div class="categorytitle" id="categoryLERNADO">
-					Lernado
+					Aprendizado
 				</div>
 				<div class="tiles">
 					<div class="tile tileW1 tileH1">
@@ -555,7 +669,7 @@
 			</div>
 			<div class="category tilesW4">
 				<div class="categorytitle" id="categoryPROJEKTOJ">
-					Projektoj
+					Projetos
 				</div>
 				<div class="tiles">
 					<div class="tile tileW1 tileH1">

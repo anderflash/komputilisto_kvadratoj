@@ -1,6 +1,7 @@
 var currentPost = null;
+var currentLang;
 var currentUrl;
-var currentPath = window.location.href;
+var currentPath = sitePath;
 var disqusComment;
 var funcao;
 var langJSON;
@@ -92,8 +93,14 @@ function collapseCurrentPost()
 
 function language(lang)
 {
+  currentLang = lang;
 	$.each(langJSON[lang], function(key,val)
 	{
 		$("#category"+key).text(val);
+	});
+	
+	$(".postHeader").each(function()
+	{
+	  console.log($(this).find(".postRelated ." + lang).text());
 	});
 }

@@ -221,7 +221,6 @@ body
 			{
 				font-size:10pt;
 				font-weight:bold;
-				font-style:italic;
 				text-align:center;
 				width:228px;
 				display:inline-block;
@@ -251,6 +250,7 @@ body
 				white-space: initial;
 				margin-top:-2px;
 				color:burlywood;
+				font-style:italic;
 			}
 			.postContent
 			{
