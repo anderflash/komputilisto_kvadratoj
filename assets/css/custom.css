@@ -105,6 +105,7 @@ body
 				vertical-align:middle;
 				cursor:hand;
 				cursor:pointer;
+				float:left;
 			}
 			.top
 			{
@@ -225,6 +226,21 @@ body
 				width:228px;
 				display:inline-block;
 			}
+			.langs img
+			{
+				float:left;
+				vertical-align:middle;
+				margin:9px 0px 0px 5px;
+				cursor:hand;
+				cursor:pointer;
+				width:20px;
+				height:12px;
+			}
+			.langs
+			{
+				float:left;
+				vertical-align:middle;
+			}
 			.postDescription
 			{
 				width:228px;
@@ -233,14 +249,15 @@ body
 				float:left;
 				height:45px;
 				white-space: initial;
-				margin-top:-4px;
+				margin-top:-2px;
+				color:burlywood;
 			}
 			.postContent
 			{
 				background:beige;
 				color:darkred;
 				text-shadow:none;
-				display:none;
+				visibility:hidden;
 			}
 			.postDate
 			{

@@ -1,0 +1,23 @@
+{
+	"en-US":{
+		"Blogo":"Blog",
+		"Lernado":"Learning",
+		"Programaroj":"Apps",
+		"Pri Mi":"About Me",
+		"Projektoj":"Projects",
+	},
+	"pt-BR":{
+		"Blogo":"Blog",
+		"Lernado":"Aprendizado",
+		"Programaroj":"Programas",
+		"Pri Mi":"Sobre Mim",
+		"Projektoj":"Projetos",
+	}
+	"eo":{
+		"Blogo":"Blogo",
+		"Lernado":"Lernado",
+		"Programaroj":"Programaroj",
+		"Pri Mi":"Pri Mi",
+		"Projektoj":"Projektoj",
+	}
+}
