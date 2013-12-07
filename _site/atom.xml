@@ -8,85 +8,85 @@
         <name>Anderson Tavares</name>
         <email>acmt@ime.usp.br</email>
     </author>
-    <updated>December  6, 2013</updated>
+    <updated>December  7, 2013</updated>
     <entry>
     <title>Tutorial WebGL: Técnica Render-to-Texture</title>
-    <link href="http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-13-webgl-render-to-texture.html" />
-    <id>http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-13-webgl-render-to-texture.html</id>
+    <link href="http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-13-webgl-render-to-texture.html" />
+    <id>http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-13-webgl-render-to-texture.html</id>
     <published>2013-12-13T00:00:00Z</published>
-    <updated>December  6, 2013</updated>
+    <updated>December  7, 2013</updated>
     <summary type="html"><![CDATA[Técnica Render-to-Texture]]></summary>
 </entry>
 <entry>
     <title>Tutorial WebGL: Mapa de iluminação especular</title>
-    <link href="http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-12-webgl-specular-maps.html" />
-    <id>http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-12-webgl-specular-maps.html</id>
+    <link href="http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-12-webgl-specular-maps.html" />
+    <id>http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-12-webgl-specular-maps.html</id>
     <published>2013-12-12T00:00:00Z</published>
-    <updated>December  6, 2013</updated>
+    <updated>December  7, 2013</updated>
     <summary type="html"><![CDATA[Mapa de iluminação especular]]></summary>
 </entry>
 <entry>
     <title>Tutorial WebGL: Iluminação especular</title>
-    <link href="http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-11-webgl-specular-highlights.html" />
-    <id>http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-11-webgl-specular-highlights.html</id>
+    <link href="http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-11-webgl-specular-highlights.html" />
+    <id>http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-11-webgl-specular-highlights.html</id>
     <published>2013-12-11T00:00:00Z</published>
-    <updated>December  6, 2013</updated>
+    <updated>December  7, 2013</updated>
     <summary type="html"><![CDATA[Iluminação especular]]></summary>
 </entry>
 <entry>
     <title>Tutorial WebGL: Iluminação por fragmento e múltiplos programas</title>
-    <link href="http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-10-webgl-per-fragment-multiple.html" />
-    <id>http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-10-webgl-per-fragment-multiple.html</id>
+    <link href="http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-10-webgl-per-fragment-multiple.html" />
+    <id>http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-10-webgl-per-fragment-multiple.html</id>
     <published>2013-12-10T00:00:00Z</published>
-    <updated>December  6, 2013</updated>
+    <updated>December  7, 2013</updated>
     <summary type="html"><![CDATA[Iluminação por fragmento e múltiplos programas]]></summary>
 </entry>
 <entry>
     <title>Tutorial WebGL: Luz pontual</title>
-    <link href="http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-09-webgl-point-lighting.html" />
-    <id>http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-09-webgl-point-lighting.html</id>
+    <link href="http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-09-webgl-point-lighting.html" />
+    <id>http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-09-webgl-point-lighting.html</id>
     <published>2013-12-09T00:00:00Z</published>
-    <updated>December  6, 2013</updated>
+    <updated>December  7, 2013</updated>
     <summary type="html"><![CDATA[Luz pontual]]></summary>
 </entry>
 <entry>
     <title>Tutorial WebGL: Esferas</title>
-    <link href="http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-08-webgl-spheres.html" />
-    <id>http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-08-webgl-spheres.html</id>
+    <link href="http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-08-webgl-spheres.html" />
+    <id>http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-08-webgl-spheres.html</id>
     <published>2013-12-08T00:00:00Z</published>
-    <updated>December  6, 2013</updated>
+    <updated>December  7, 2013</updated>
     <summary type="html"><![CDATA[Esferas]]></summary>
 </entry>
 <entry>
     <title>Tutorial WebGL: Carregando mundo e básico de câmera</title>
-    <link href="http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-07-webgl-loading-world-camera.html" />
-    <id>http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-07-webgl-loading-world-camera.html</id>
+    <link href="http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-07-webgl-loading-world-camera.html" />
+    <id>http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-07-webgl-loading-world-camera.html</id>
     <published>2013-12-07T00:00:00Z</published>
-    <updated>December  6, 2013</updated>
+    <updated>December  7, 2013</updated>
     <summary type="html"><![CDATA[Carregando mundo e básico de câmera]]></summary>
 </entry>
 <entry>
     <title>Tutorial WebGL: Melhorando o código</title>
-    <link href="http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-06-webgl-improving-code.html" />
-    <id>http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-06-webgl-improving-code.html</id>
+    <link href="http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-06-webgl-improving-code.html" />
+    <id>http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-06-webgl-improving-code.html</id>
     <published>2013-12-06T00:00:00Z</published>
-    <updated>December  6, 2013</updated>
+    <updated>December  7, 2013</updated>
     <summary type="html"><![CDATA[Melhorando o código]]></summary>
 </entry>
 <entry>
     <title>Tutorial WebGL: Buffer de profundidade e transparência</title>
-    <link href="http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-05-webgl-depth-transparency.html" />
-    <id>http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-05-webgl-depth-transparency.html</id>
+    <link href="http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-05-webgl-depth-transparency.html" />
+    <id>http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-05-webgl-depth-transparency.html</id>
     <published>2013-12-05T00:00:00Z</published>
-    <updated>December  6, 2013</updated>
+    <updated>December  7, 2013</updated>
     <summary type="html"><![CDATA[Buffer de profundidade e transparência]]></summary>
 </entry>
 <entry>
     <title>Tutorial WebGL: Luz direcional e ambiente</title>
-    <link href="http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-04-webgl-directional-ambient-light.html" />
-    <id>http://vision.ime.usp.br/~acmt/komputilisto/blogo/2013-12-04-webgl-directional-ambient-light.html</id>
+    <link href="http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-04-webgl-directional-ambient-light.html" />
+    <id>http://vision.ime.usp.br/~acmt/komputilisto/pt-BR/blogo/2013-12-04-webgl-directional-ambient-light.html</id>
     <published>2013-12-04T00:00:00Z</published>
-    <updated>December  6, 2013</updated>
+    <updated>December  7, 2013</updated>
     <summary type="html"><![CDATA[Luz direcional e ambiente]]></summary>
 </entry>
 

@@ -15,6 +15,7 @@ import Hakyll
 import Network.HTTP (urlEncode)
 import Data.ByteString.UTF8
 
+
 main :: IO ()
 main = hakyllWith config $ do
     -- template <- liftIO $ readDataFileUTF8 Nothing "templates/default.epub"
@@ -88,8 +89,13 @@ main = hakyllWith config $ do
             let archiveCtx = constField "title" "Todos os posts" `mappend`
                              defaultContext
             makeItem list
-                >>= loadAndApplyTemplate "templates/index.html" (mconcat[constField "sitePath" "http://vision.ime.usp.br/~acmt/komputilisto",mathCtx,archiveCtx])
-
+                >>= loadAndApplyTemplate "templates/index.html" (mconcat[constField "sitePath" siteUrl,mathCtx,archiveCtx])
+                
+    -- Render posts list
+    createPostsListLang "pt-BR"
+    createPostsListLang "en-GB"
+    createPostsListLang "eo"
+    
     -- Static pages
 		{-match "pages/*" $ do
         route $ gsubRoute "pages/" (const "") `composeRoutes` setExtension "html"
@@ -251,6 +257,20 @@ postList back tags pattern preprocess' = do
     posts <- preprocess' =<< loadAll (pattern .&&. hasNoVersion)
     applyTemplateList postItemTpl (mconcat[constField "back" back,tagsCtx tags]) posts
 
+createPostsListLang :: String -> Rules ()
+createPostsListLang lang = create [fromFilePath ("category" ++ lang ++ ".json")] $ do
+        route idRoute
+        compile $ do
+            posts <- recentFirst =<< loadAll (fromGlob (lang ++ "/blogo/*") .&&. hasNoVersion)
+            itemTpl <- loadBody "templates/postheader.json"
+            list <- applyJoinTemplateList "," itemTpl postCtx posts
+            let archiveCtx = constField "title" "Todos os posts" `mappend`
+                             defaultContext
+            makeItem list
+                >>= loadAndApplyTemplate "templates/postList.json" (mconcat[constField "sitePath" siteUrl,mathCtx,archiveCtx])
+
+siteUrl :: String
+siteUrl = "http://vision.ime.usp.br/~acmt/komputilisto"
 
 mathjax :: Item String -> Compiler String
 mathjax item = do

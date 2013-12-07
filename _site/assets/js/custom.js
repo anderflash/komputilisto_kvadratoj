@@ -98,9 +98,27 @@ function language(lang)
 	{
 		$("#category"+key).text(val);
 	});
-	
-	$(".postHeader").each(function()
+	$.getJSON(currentPath + "category" + lang + ".json", function(text)
 	{
-	  console.log($(this).find(".postRelated ." + lang).text());
+	  $(".postHeader").each(function(i, elem)
+	  {
+		var post = text.posts[i];
+		$(this).find(".postTitle").text(post.title);
+		$(this).find(".postDate .month").text(post["date.month"]);
+		$(this).find(".postDate .day").text(post["date.day"]);
+		$(this).find(".postDate .year").text(post["date.year"]);
+		$(this).find(".postDescription").text(post.description);
+		$(this).attr("onclick","postHeaderClicked(event, '"+ "/" + lang + "/blogo/" + post[lang] +".html')");
+	  });
+	  console.log(text);
+	  
 	});
+	/*$(".postHeader").each(function()
+	{
+	  $.get(currentPath + lang + "/blogo/" + $(this).find(".postRelated ." + lang).text()+".html")
+	   .done(function(html)
+	   {
+		 console.log(html);
+	   });;
+	});*/
 }

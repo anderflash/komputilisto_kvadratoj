@@ -4,9 +4,9 @@ tags: mendeley, bibtex
 author: Anderson Tavares
 thumbnail: assets/images/mendeley-thumb.jpg
 description: Removendo as barras invertidas típicas de _escaping_ do LaTeX
-en-GB: 2013-12-06-making-my-blog.md
-eo: 2013-12-06-farinte-mian-blogon.md
-pt-BR: 2013-11-24-fazendo-meu-blog.md
+en-GB: 2013-11-24-consertando-links-mendeley-bib
+eo: 2013-11-24-consertando-links-mendeley-bib
+pt-BR: 2013-11-24-consertando-links-mendeley-bib
 ---
 
 Se você recebeu um arquivo bib exportado com _escaping_ nos símbolos especiais, você pode retirar a barra invertida desses símbolos, especialmente nos campos de url.
