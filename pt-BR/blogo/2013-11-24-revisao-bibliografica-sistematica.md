@@ -7,8 +7,8 @@ math: false
 biblio: library.bib
 csl: ieee-with-url.csl
 thumbnail: assets/images/livros-abertos-thumb.jpg
-en-GB: 2013-12-24-revisao-bibliografica-sistematica
-eo: 2013-12-24-revisao-bibliografica-sistematica
+en-GB: 2013-11-24-revisao-bibliografica-sistematica
+eo: 2013-11-24-revisao-bibliografica-sistematica
 pt-BR: 2013-11-24-revisao-bibliografica-sistematica
 ---
 

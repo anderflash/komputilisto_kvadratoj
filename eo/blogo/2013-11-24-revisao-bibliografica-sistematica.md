@@ -1,14 +1,14 @@
 ---
-title: Revisão Bibliográfica Sistemática
+title: Laŭsistema Bibliografia Revuo
 author: Anderson Tavares
-description: Sobre Revisão Bibliográfica Sistemática: conceitos, métodos e discussão
+description: Pri Laŭsistema Bibliografia Revuo: konceptoj, metodoj kaj e diskutoj
 tags: RBS, Metanálise
 math: false
 biblio: library.bib
 csl: ieee-with-url.csl
 thumbnail: assets/images/livros-abertos-thumb.jpg
-en-GB: 2013-12-24-revisao-bibliografica-sistematica
-eo: 2013-12-24-revisao-bibliografica-sistematica
+en-GB: 2013-11-24-revisao-bibliografica-sistematica
+eo: 2013-11-24-revisao-bibliografica-sistematica
 pt-BR: 2013-11-24-revisao-bibliografica-sistematica
 ---
 

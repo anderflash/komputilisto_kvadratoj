@@ -7,9 +7,9 @@ thumbnail: assets/images/webgl-introducao-thumb.png
 biblio: library.bib
 csl: ieee-with-url.csl
 math: True
-en-GB: 2013-11-24-webgl-introducao
-eo: 2013-11-24-webgl-introducao
-pt-BR: 2013-11-24-webgl-introducao
+en-GB: 2013-11-27-webgl-introducao
+eo: 2013-11-27-webgl-introducao
+pt-BR: 2013-11-27-webgl-introducao
 ------------------------------
 
 O que é?

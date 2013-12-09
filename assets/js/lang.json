@@ -1,23 +1,26 @@
 {
 	"en-GB":{
-		"BLOGO":"Blog",
-		"LERNADO":"Learning",
-		"PROGRAMAROJ":"Apps",
-		"PRIMI":"About Me",
-		"PROJEKTOJ":"Projects"
+		"categoryBLOGO":"Blog",
+		"categoryLERNADO":"Learning",
+		"categoryPROGRAMAROJ":"Apps",
+		"categoryPRIMI":"About Me",
+		"categoryPROJEKTOJ":"Projects",
+		"POWEREDBY":"Powered by"
 	},
 	"pt-BR":{
-		"BLOGO":"Blog",
-		"LERNADO":"Aprendizado",
-		"PROGRAMAROJ":"Programas",
-		"PRIMI":"Sobre Mim",
-		"PROJEKTOJ":"Projetos"
+		"categoryBLOGO":"Blog",
+		"categoryLERNADO":"Aprendizado",
+		"categoryPROGRAMAROJ":"Programas",
+		"categoryPRIMI":"Sobre Mim",
+		"categoryPROJEKTOJ":"Projetos",
+		"POWEREDBY":"Feito por"
 	},
 	"eo":{
-		"BLOGO":"Blogo",
-		"LERNADO":"Lernado",
-		"PROGRAMAROJ":"Programaroj",
-		"PRIMI":"Pri Mi",
-		"PROJEKTOJ":"Projektoj"
+		"categoryBLOGO":"Blogo",
+		"categoryLERNADO":"Lernado",
+		"categoryPROGRAMAROJ":"Programaroj",
+		"categoryPRIMI":"Pri Mi",
+		"categoryPROJEKTOJ":"Projektoj",
+		"POWEREDBY":"Farita de"
 	}
 }

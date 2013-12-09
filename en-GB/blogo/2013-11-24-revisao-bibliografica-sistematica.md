@@ -7,21 +7,21 @@ math: false
 biblio: library.bib
 csl: ieee-with-url.csl
 thumbnail: assets/images/livros-abertos-thumb.jpg
-en-GB: 2013-12-24-revisao-bibliografica-sistematica
-eo: 2013-12-24-revisao-bibliografica-sistematica
+en-GB: 2013-11-24-revisao-bibliografica-sistematica
+eo: 2013-11-24-revisao-bibliografica-sistematica
 pt-BR: 2013-11-24-revisao-bibliografica-sistematica
 ---
 
 % Revisão Bibliográfica Sistemática
 % Universidade de São Paulo
 
-# Objetivo
+# Goals
 
 O objetivo deste estudo é analisar as definições sobre a Revisão Bibliográfica Sistemática por diferentes autores de forma a compreender a importância deste tópico para as pesquisas acadêmicas. As etapas fornecidas por cada trabalho são listadas. Conclusões são tiradas para resumir os conceitos e escolher, modificar e/ou criar um modelo de revisão sistemática para uso nas pesquisas futuras.
 
 <!--more-->
 
-# Conceitos
+# Concepts
 
 Sampaio [@Sampaio2007] descreve a revisão sistemática como uma forma de pesquisa que utiliza como fonte de dados a literatura sobre determinado tema, definindo seu método como: uma pergunta clara, a definição de uma estratégia de busca, o estabelecimento de critérios de inclusão e exclusão dos estudos e uma análise criteriosa da qualidade da literatura selecionada. Ele sugere que a revisão seja feita por pelo menos dois pesquisadores, realizando a revisão de forma imparcial, de acordo com o protocolo de pesquisa definido. Seu texto conceitua a revisão sistemática sem metanálise, uma forma de integrar os dados dos estudos e aplicar métodos estatísticos para definir o grau de confiabilidade da revisão.
 
@@ -41,7 +41,7 @@ O modelo de revisão sistemática de Levy e Ellis é dividido em: entrada (artig
 Galvão et al. [@Galvao2004] define o método de revisão sistemático aplicado à análise clínica, embora seus passos sejam consistentes com os estudos de outros autores.
 
 
-# Conclusão
+# Conclusion
 
 Uma das vantagens que praticamente todos os autores disseram com a aplicação da revisão sistemática é a identificação de áreas ou problemas que necessitam de futuras pesquisas. 
 
@@ -49,4 +49,4 @@ Uma dificuldade encontrada nesse estudo é a falta de detalhes sobre a melhor fo
 
 Vantagens do modelo de Conforto [@Conforto2011] são: o uso explícito de fatores de impacto comuns por pesquisadores brasileiros, como a Qualis-CAPES, formulários sugeridos para uso, melhor detalhamento dos processos de busca e filtragem, ciclos na fase de processamento enfatizando a evolução gradual da revisão e aprendizagem do pesquisador. Tal modelo pode ser modificado para detalhar como pode ser feita, especificamente, a análise da qualidade dos estudos, de acordo com o problema investigado.
 
-# Bibliografia
+# References

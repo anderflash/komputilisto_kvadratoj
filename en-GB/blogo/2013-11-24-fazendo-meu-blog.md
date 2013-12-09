@@ -12,18 +12,18 @@ eo: 2013-11-24-fazendo-meu-blog
 pt-BR: 2013-11-24-fazendo-meu-blog
 ---
 
-Oi Pessoal, estou testando um blog em Hakyll.
+Hi there, I'm testing a Hakyll blog.
 
-# Fórmula
+# Formula
 
 $$\sum^{n}_{i=1}{i^2*3}$$
 
-# Citações
+# Citations
 
-Este parágrafo[@Wikipedia2013] contém citações[@Pai2004] 
-de texto para criar uma bibliografia diretamente[@Galvao2004] 
-pelo arquivo .bib, exportado[@Castro2001] do Mendeley que contém 
-um catálogo dos meus artigos.
+This paragraph[@Wikipedia2013] has text citations [@Pai2004] 
+to create a library directly [@Galvao2004] 
+by the .bib file, exported [@Castro2001] from Mendeley which has
+a catalogue of my articles.
 
-# Bibliografia
+# References
 

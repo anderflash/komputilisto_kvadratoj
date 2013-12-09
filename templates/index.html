@@ -1,7 +1,14 @@
 <html>
   <meta charset="UTF-8">
   <head>
-	<script>var sitePath = "$sitePath$/" ;</script>
+    <meta property="shareaholic:image" content="http://vision.ime.usp.br/~acmt/komputilisto/assets/images/logo.png" id="facebookShareMeta"/>
+    <meta property="twitter:image" content="http://vision.ime.usp.br/~acmt/komputilisto/assets/images/logo.png" id="twitterShareMeta"/>
+    <meta property="og:image" content="http://vision.ime.usp.br/~acmt/komputilisto/assets/images/logo.png" id="ogShareMeta"/>
+    <meta property="og:title" content="Komputilisto - Anderson Carlos Moreira Tavares" />
+    <meta property="og:type" content="article" />
+    <title>Komputilisto - Anderson Carlos Moreira Tavares</title>
+    <script>var sitePath = "$sitePath$/" ;</script>
+    
         
   <!-- SHAREAHOLIC -->
 	<script type="text/javascript">
@@ -26,7 +33,7 @@
 	<!-- CORRECT.LI -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="assets/js/correctliapi.js" type="text/javascript" ></script>
-	<script type="text/javascript">
+	<!--<script type="text/javascript">
 		jQuery(document).ready(function() {
 		  jQuery("body").correctli({
 			language: 'en',
@@ -35,8 +42,9 @@
 			keyCombination: 'none'
 		  });
 		});
-	</script>
-
+	</script>-->
+	<!--SAMMY-->
+	<script type="text/javascript" src="assets/js/sammy-latest.min.js"></script>
 		<!-- JSCROLLPANE -->
   	<!-- styles needed by jScrollPane -->
 	<link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
@@ -66,11 +74,11 @@
 	</script>
   </head>
   <body>
-		<div class="content">
+		<div class="content" id="main">
 			
 			<div class="category tilesW5">
 				<div class="categorytitle" id="categoryBLOGO">
-				  Blog<div class='shareaholic-canvas' data-app='share_buttons' data-app-id='582717'></div>
+				  Blog
 				</div>
 				<div class="categoryPaginator">
 					<div class="back"></div>
@@ -86,7 +94,7 @@
 					Aprendizado
 				</div>
 				<div class="tiles">
-					<div class="tile tileW1 tileH1">
+					<div class="tile tileW1 tileH1" style="background:#500010">
 						<img src="assets/images/muzaiko_logo.svg"/>
 					</div>
 					<div class="tile tileW1 tileH1" style="background:#aa0000;">
@@ -96,7 +104,7 @@
 					<img src="assets/images/lernu_logo.svg"/>
 					</div>
 					<div class="tile tileW1 tileH1" style="background:#500010">
-					<img src="assets/images/muzaiko_logo.svg"/>
+					  <img src="assets/images/muzaiko_logo.svg"/>
 					</div>
 					<div class="tile tileW1 tileH1">
 					Teste5
@@ -174,12 +182,12 @@
 	  <div class="logo" onclick="reiniciar()">
       </div>
       <div class="langs">
-		  <img src="assets/images/Brazil.png" onclick="language('pt-BR');"/>
-		  <img src="assets/images/United_Kingdom.png" onclick="language('en-GB');"/>
-		  <img src="assets/images/esperanto.svg" onclick="language('eo');"/>
+		  <img src="assets/images/Brazil.png" onclick="app.gotoLang('pt-BR');"/>
+		  <img src="assets/images/United_Kingdom.png" onclick="app.gotoLang('en-GB');"/>
+		  <img src="assets/images/esperanto.svg" onclick="app.gotoLang('eo');"/>
       </div>
     </div>
-    <footer class="copyright">Farita de <a href="http://www.ime.usp.br/~acmt" target="_blank">Anderson Tavares</a> - 2013 <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></footer>
+    <footer class="copyright"><span id="POWEREDBY">Farita de</span> <a href="http://www.ime.usp.br/~acmt" target="_blank">Anderson Tavares</a> - 2013 <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></footer>
     <div id="disqusComment">
 		<div id="disqus_thread"></div>
 		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

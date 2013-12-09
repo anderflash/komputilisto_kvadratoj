@@ -1,7 +1,7 @@
 ---
-title: Fazendo Meu Blog
+title: Faranta Mian Blogon
 author: Anderson Tavares
-description: Fiz meu blog
+description: Mi faris mian blogon
 tags: haskell, meta
 math: true
 biblio: library.bib
@@ -12,18 +12,18 @@ eo: 2013-11-24-fazendo-meu-blog
 pt-BR: 2013-11-24-fazendo-meu-blog
 ---
 
-Oi Pessoal, estou testando um blog em Hakyll.
+Saluton amikoj, mi provas blogon en Hakyll.
 
-# Fórmula
+# Formulo
 
 $$\sum^{n}_{i=1}{i^2*3}$$
 
-# Citações
+# Citaĵoj
 
-Este parágrafo[@Wikipedia2013] contém citações[@Pai2004] 
-de texto para criar uma bibliografia diretamente[@Galvao2004] 
-pelo arquivo .bib, exportado[@Castro2001] do Mendeley que contém 
-um catálogo dos meus artigos.
+Ĉi tiu paragrafo [@Wikipedia2013] enhavas citaĵojn [@Pai2004] 
+de teksto por krei bibliografion rekte [@Galvao2004] 
+de la dosiero .bib, eksportita [@Castro2001] el Mendeley kiu enhavas 
+katalogon de miaj artikoloj.
 
-# Bibliografia
+# Bibliografio
 

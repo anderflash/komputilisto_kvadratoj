@@ -45,7 +45,11 @@ main = hakyllWith config $ do
         compile copyFileCompiler
 
     -- Render posts
-    match ("en-GB/blogo/*" .||. "en-GB/blogo/*" .||. "pt-BR/blogo/*") $ do
+    matchLanguage "en-GB" tags
+    matchLanguage "pt-BR" tags
+    matchLanguage "eo" tags
+    
+    {-match ("en-GB/blogo/*" .||. "eo/blogo/*" .||. "pt-BR/blogo/*") $ do
         route   $ setExtension ".html"
 	compile $ do
 	  item <- getUnderlying
@@ -55,13 +59,13 @@ main = hakyllWith config $ do
 		bibtexCompiler cslFile bibFile
 		else	pandocCompilerWith defaultHakyllReaderOptions pandocOptions
 	  compiler
-            >>= loadAndApplyTemplate "templates/post.html" (tagsCtx tags)
+            >>= loadAndApplyTemplate "templates/post.html" (mconcat[field,tagsCtx tags])
             >>= saveSnapshot "content"
     --        >>= pageCompiler
             
-    
+            -}
 
-    match ("en-GB/blogo/*" .||. "en-GB/blogo/*" .||. "pt-BR/blogo/*") $ version "toc" $
+    match ("en-GB/blogo/*" .||. "eo/blogo/*" .||. "pt-BR/blogo/*") $ version "toc" $
        compile $ pandocCompilerWith defaultHakyllReaderOptions
                                     defaultHakyllWriterOptions {
                                         writerTableOfContents = True
@@ -238,6 +242,31 @@ main = hakyllWith config $ do
     -- Read templates
     match "templates/*" $ compile templateCompiler
 
+contentNameLang :: String -> String
+contentNameLang "en-GB" = "Content"
+contentNameLang "pt-BR" = "Conteúdo"
+contentNameLang "eo" = "Enhavo"
+
+updatedNameLang :: String -> String
+updatedNameLang "en-GB" = "updated"
+updatedNameLang "pt-BR" = "atualizado"
+updatedNameLang "eo" = "ĝisdatigita"
+ 
+matchLanguage :: String -> Tags -> Rules()
+matchLanguage lang tags = match (fromGlob (lang++"/blogo/*")) $ do
+        route   $ setExtension ".html"
+	compile $ do
+	  item <- getUnderlying
+	  bibFile <- liftM (fromMaybe "") $ getMetadataField item "biblio"
+	  cslFile <- liftM (fromMaybe "chicago") $ getMetadataField item "csl"
+	  let compiler = if bibFile /= "" then
+		bibtexCompiler cslFile bibFile
+		else	pandocCompilerWith defaultHakyllReaderOptions pandocOptions
+	  compiler
+            >>= loadAndApplyTemplate "templates/post.html" (mconcat[constField "contentName" (contentNameLang lang),constField "updatedName" (updatedNameLang lang),tagsCtx tags])
+            >>= saveSnapshot "content"
+    --        >>= pageCompiler
+  
 -- Auxiliary compilers
 pageCompiler :: Item String -> Compiler (Item String)
 pageCompiler i = loadAndApplyTemplate "templates/default.html" (mathCtx `mappend` defaultContext) i
