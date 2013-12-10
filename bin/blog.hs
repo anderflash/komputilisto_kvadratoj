@@ -84,7 +84,7 @@ main = hakyllWith config $ do
                     (readPandoc body)
                     -}
     -- Render posts list
-    create ["index.html"] $ do
+    create ["index.php"] $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll ("pt-BR/blogo/*" .&&. hasNoVersion)
@@ -93,7 +93,7 @@ main = hakyllWith config $ do
             let archiveCtx = constField "title" "Todos os posts" `mappend`
                              defaultContext
             makeItem list
-                >>= loadAndApplyTemplate "templates/index.html" (mconcat[constField "sitePath" siteUrl,mathCtx,archiveCtx])
+                >>= loadAndApplyTemplate "templates/index.php" (mconcat[constField "sitePath" siteUrl,mathCtx,archiveCtx])
                 
     -- Render posts list
     createPostsListLang "pt-BR"

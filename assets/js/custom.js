@@ -34,6 +34,7 @@ $.getJSON("assets/js/lang.json",function(langText){
 
 for(var i = 0; i < languages.length; i++)
 {
+  
   var language = languages[i];
   (function(language){
     $.getJSON("category"+language+".json",function(langText){
@@ -162,6 +163,7 @@ allMeta.changeLanguage = function(lang)
 
 allMeta.openPostByIndex = function(i)
 {
+  allMeta.correctShareMeta(i);
   var postContent = this.getPostContent(this.getPostAddress(i));
   console.log(this.postPath(currentPath,currentLang,this[currentLang].posts[i][currentLang]));
   /*app.get(this.postPath(currentPath,currentLang,this[currentLang].posts[i][currentLang]), function()
@@ -217,7 +219,8 @@ allMeta.expandPost = function(postContent, i)
 
 allMeta.openPostByAddress = function(postAddress)
 {
-  this.closeCurrentPost();
+  if(currentPost != this.getPostIndex(postAddress))
+	this.closeCurrentPost();
   var index = this.getPostIndex(postAddress);
   if(index != null) this.openPostByIndex(index);
 };
@@ -267,20 +270,20 @@ allMeta.correctShareMeta = function(i)
   metaOg.attr("content",thumbnailUrl);
   metaOgTitle.attr("content",title);
 }
-//---------------------------------------------------------------
 
+//---------------------------------------------------------------
+// ------------------------SAMMY---------------------
 // define a new Sammy.Application bound to the #main element selector
 var app = Sammy('#main', function() {
   
-  // define a 'get' route that will be triggered at '#/path'
-  this.get('#/path', function() {
+  // define a 'get' route that will be triggered at '#!/path'
+  this.get('#!/path', function() {
     // this context is a Sammy.EventContext
-    alert("oi");
   });
   
   this.gotoLang = function(lang)
   {
-    var new_location = '#/lang/'+lang;
+    var new_location = '#!/lang/'+lang;
     this.trigger('redirect',{to:new_location});
     this.last_location = ['get',new_location];
     this.setLocation(new_location);
@@ -288,7 +291,7 @@ var app = Sammy('#main', function() {
   
   this.gotoPost = function(title)
   {
-    var new_location = '#/post/'+title+"/"+currentLang;
+    var new_location = '#!/post/'+title+"/"+currentLang;
     this.trigger('redirect',{to:new_location});
     this.last_location = ['get',new_location];
     this.setLocation(new_location);
@@ -296,33 +299,54 @@ var app = Sammy('#main', function() {
   
   this.gotoPostByIndex = function(index)
   {
-    var new_location = '#/post/'+allMeta.getPostAddress(index)+"/"+currentLang;
+	if(index == currentPost)
+	{
+	  allMeta.closeCurrentPost();
+	  gotoLang(currentLang);
+	}
+	else
+	{
+	  var new_location = '#!/post/'+allMeta.getPostAddress(index)+"/"+currentLang;
+	  this.trigger('redirect',{to:new_location});
+	  this.last_location = ['get',new_location];
+	  this.setLocation(new_location);
+	}
+  }
+  
+  this.restart = function(index)
+  {
+	allMeta.closeCurrentPost();
+	$('html, body').animate({
+		scrollTop: 0
+	}, 2000);
+	var new_location = '#!/lang/'+(currentLang || 'pt-BR');
     this.trigger('redirect',{to:new_location});
     this.last_location = ['get',new_location];
     this.setLocation(new_location);
   }
   
-  this.get('#/post/:address/:lang', function(valor) {
+  this.get('#!/post/:address/:lang', function(valor) {
     allMeta.changeLanguage(this.params['lang']);
+	allMeta.correctShareMeta(allMeta.getPostIndex(this.params['address']));
     allMeta.openPostByAddress(this.params['address']);
   });
     
-  this.get('#/lang/:lang',function()
+  this.get('#!/lang/:lang',function()
   {
     allMeta.changeLanguage(this.params['lang']);
+	if(currentPost != null) app.gotoPostByIndex(currentPost);
   });
   
-  this.get('#/', function()
+  this.get('#!/', function()
   {
-    alert("OI");
   });
   
   this.get('', function()
   {
     allMeta.closeCurrentPost();
-    var new_location = '#/lang/'+ (currentLang || 'pt-BR');
+    var new_location = '#!/lang/'+ (currentLang || 'pt-BR');
     this.redirect(new_location);
-    this.setLocation(new_location);
+    app.setLocation(new_location);
     
     /*app.trigger('redirect',{to:new_location});
     app.last_location = ['get',new_location];
@@ -334,12 +358,30 @@ var app = Sammy('#main', function() {
 
 $(function()
 {
+  console.log("load executando");
+  
+  var metaShareaholic = $("head").find("[property='shareaholic:image']");
+  var metaTwitter 	= $("head").find("[property='twitter:image']");
+  var metaOg 		= $("head").find("[property='og:image']");
+  var metaOgTitle	= $("head").find("[property='og:title']");
+  
+  $("head").append(metaShareaholic);
+  $("head").append(metaTwitter);
+  $("head").append(metaOg);
+  $("head").append(metaOgTitle);
+  //var thumbnailUrl = currentPath + this[currentLang].posts[i].thumbnail;
+  var title = "Teste";
+  metaOgTitle.attr("content",title);
+  
   aplicacaoPronta = true;
   $('.scroll-pane').jScrollPane({ autoReinitialise: true });
   disqusComment = $('#disqusComment');
   disqusComment.css("display","none");
   executarApp();
 });
+
+//---------------------------------------------------------------
+// --------------------DEPRECATED------------------------
 
 function openPost(lang, title, thumb)
 {

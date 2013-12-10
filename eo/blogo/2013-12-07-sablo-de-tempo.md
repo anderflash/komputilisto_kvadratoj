@@ -87,7 +87,62 @@ Malmultaj vortoj, sed sufiĉe por detali sian voĉon. Serena voĉo, malgraŭ mar
 
 Titi, kun viaj grandaj okuloj, klopodis vidi ĉiun detalon de ĉiu libra ilustraĵo. Lui pensis je la mirindaĵo kiu estus koni la kulturon de pasintaj popoloj. Kvankam li ne kredis en neniu momento en ebleco ekzisti aŭ esti konstruota maŝinon de tempo. Sed Titi estis kreinta maŝinon de teletransportado, kvankam Lui pensis ke ĝi estus nur magion.
 
-En la vendejo estas multaj antikvaj aferoj, kaj la polvo estis donanta 
+En la vendejo estas multaj antikvaj aferoj, kaj la polvo estis donanta alergion al Lui. Ili adiaŭis sinjoron Siljermano kaj promenis al la hejmon de Titi:
 
+- Vi ankoraŭ ne kredas en mia teletransportada maŝino?
+- Kompreneble ne. - admonis Lui.
+- Mi pruvos al vi ke ĝi funkcias.
+
+En la vojo kunokaze, ili renkontis la saman junulinon kiu perdis la juvelon. Ŝi ridetis al ili:
+
+- Tre bone vidi vin denove, vi kuris tre rapide antaŭe.
+- Mi estis tre malfruata.
+- Lasu min prezentiĝi. Mia nomo estas Pan.
+- Saluton Pan. Mi estas Lui kaj tiu estas Titi.
+- Plezuron. Kien vi iros?
+- Ni vidos la teletransportadan maŝino de Titi ne funkcii. - Ŝerci Lui.
+- Ĉu mi povas akompani vin?
+- Kompreneble, vi povas veni.
+
+Kaj tiel ili iris al la domo de Titi. Alvenante tie, ili iris al la areo apud la domo, kovranta kaj fermata. Titi malfermis la pordon kaj ili eniris.
+Tie ŝajnis la vendejo de Siljermano, tiel ekzotika, kun multaj metalaj aferoj, fadeno, ĉio konektita, sed malordigita. Tiu stranga aparato ne dekorindas ĉambron.
+
+- Dio mia, mi volas vidi ĝin funkcii - diris Pan
+- Tio ĉiam funkcias, ĉu ne Lui? - ŝercis Titi.
+- Hum, vi trompos ankaŭ nian amikinon Pan?
+
+Estis du cirklaj platformoj en la maŝino. Titi metis cepon super unu el ili kaj petis la junuloj por formovi. Poste, ŝi faris multaj konektojn kaj faris la kalkuladon: 3, 2, 1. Kaj granda brilo aperis el la fadenaĵoj de la maŝino, kun multaj fajreroj. La cepo fariĝis je multaj brilaj punktetoj, sed tujprete la punktetoj estis super la alia platformo, unuiĝanta kaj fariĝanta la afero plej atendanta de la tuta mondo: la cepo.
+
+- Mi estas geniino, ĉu ne? - Diris Titi kun fiero.
+- Ho, mirindaĵo, me neniam vidis ion egala - diris Pan surpriza.
+- Ĉu vi kredas je ŝi?
+- Mojosa, ĉu mi povas teletransportiĝi?
+- Mi neniam faris esplorado kun homoj, sed mi jam faris kun bestoj. Ni povas provi.
+
+Kaj Pan supreniris super la platformo kun zorgo, ĉar la maŝino estas manfarita kaj viaj komponantoj ne estis tre fiksaj.
+Poste Titi petis al Lui por formoviĝi.
+Kaj Titi komencis fari kalkuladon: 3, 2, 1.
+Denove la fadenoj de la maŝino lumiĝis, sed ion stranga okazis.
+La desegno de la radikoj en la juvelo estis ekbrilantaj laŭgrade, brilo kiu farigus ĵaluza alian ajn juvelon.
+Sed la fadenoj de la maŝino iom post iom brilis pli kaj provokanta fumon. La lumo brilis tiom ke Lui kaj Titi fermis siajn okulojn. Subite ili aŭdis krioj de Pan. Lui kaj Titi klopodis malfermi la okulojn por vidi kio okazis. Ili vidis ion teruran: cirklon ŝajnanta vortico kiu estis suĉanta Pan.
+Kiam ili kuris kontraŭ Pan, li estis en la cirklo kiu perdis forton ĝis ĝi malfermiĝis, malaperanta Pan tute. Titi estis paralizata. Lui jam kredis ke ĝi ne havis magion. Kion ni faros? Post staris en silento por kelkaj minutoj, Lui rimarkis aferon. La juvelo estis ankoraŭ super la platformo.
+
+- Mi iros malantaŭ ŝi - Lui parolis prenante la juvelon.
+- Ĝi estas danĝera. Mi konkludas ke iamaniere la spaco estis distordita kaj tio signifas ke ŝi povas ne esti ĉi tie plu.
+- Ĉu ŝi mortis?
+- Mi ne scias, sed ŝi povas esti je alia epoko, en alia loko.
+- Mi iros eĉ tiel.
+- Ĉu vi certas?
+- Jes.
+
+Eĉ ne sciante pri kio afekciis la maŝinon, ŝi pensis pri la juvelo. Do, ŝi klopodis ŝanĝi la bruligitaj komponantoj. Kaj ŝi ŝaltis ĝin denove. Kaj ŝi faris la regresan kalkuladon.
+
+- 3, 2... Mi serĉos pri kio okazis.
+- Bone.
+- 1... Pretiĝu
+
+Kai denove la vortico aperis, suĉanta Lui rapide.
+
+- Ĝis revido, amiko - diris Titi
 
 (Daurigota...)

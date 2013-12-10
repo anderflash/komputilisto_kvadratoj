@@ -80,7 +80,8 @@ Terminada a prova, depois de tanto suor que ele produziu por uma única prova, e
 - Eu estava aguardando isso.
 - Todavia estou muito cansado, vamos logo.
 
-Eles caminharam até a loja de Siljermano. Na porta tinha um símbolo indecifrável, e não tinha tradução ao lado, embaixo ou em qualquer lugar. Ao lado do símbolo tinha um desenho do que parece ser uma adaga inscrita num triângulo. O que seria isso? Um tanto assustador, mas também curioso, pois esses símbolos nunca foram mencionados quando eles foram à igreja. De qualquer forma, eles bateram a porta.
+Eles caminharam até a loja de Siljermano. Na porta tinha um símbolo indecifrável, e não tinha tradução ao lado, embaixo ou em qualquer lugar. Ao lado do símbolo tinha um desenho do que parece ser uma adaga inscrita num triângulo. O que seria isso? Um tanto assustador, mas também curioso, pois esses símbolos nunca foram mencionados quando eles foram à igreja. 
+De qualquer forma, eles bateram a porta.
 Alguns segundos depois, a porta foi aberta. Um senhor que aparentava uns 50 anos, com bastante barba, cicatrizes e rugas no rosto, provocou algo estranho a Lui. De alguma forma, ele encontrava familiaridade com aqueles olhos.
 
 - Entrem, garotos.
@@ -136,7 +137,13 @@ Existia duas plataformas circulares na máquina. Titi colocou uma cebola em uma 
 - Muito legal, eu posso me teletransportar?
 - Nunca fiz com humanos, mas já fiz com animais. Podemos tentar.
 
-E Pan subiu a plataforma com cuidado, já que era uma máquina caseira e suas peças não estavam muito fixas. Depois a Titi pediu para eu me afastar. E Titi começou a fazer a contagem: 3, 2, 1. Novamente os fios da máquina se iluminaram, porém algo estranho estava acontecendo. O desenho da raiz dentro da jóia estava brilhando e piscando gradualmente, um brilho de dar inveja a qualquer outra jóia. Porém os fios da máquina cada vez mais estavam se iluminando e provocando fumaça. A luz se iluminou tanto que Lui e Titi fecharam os olhos. De repente ouviram um grito de Pan. Lui e Titi tentaram abrir os olhos para ver o que estava acontecendo. Viram algo terrível: um círculo parecendo um vortex estava sugando a Pan. Quando corremos em direção à Pan, ela já estava dentro do círculo que estava perdendo a força até se fechar, fazendo a Pan desaparecer por completo. Titi estava paralisada. Lui já achava que não tinha mais mágica naquele negócio. O que fazer? Depois de ficarem em silêncio por minutos, Lui percebeu uma coisa. A jóia ainda estava lá na plataforma.
+E Pan subiu a plataforma com cuidado, já que era uma máquina caseira e suas peças não estavam muito fixas. 
+Depois a Titi pediu para Lui se afastar. 
+E Titi começou a fazer a contagem: 3, 2, 1. 
+Novamente os fios da máquina se iluminaram, porém algo estranho estava acontecendo. 
+O desenho da raiz dentro da jóia estava brilhando e piscando gradualmente, um brilho de dar inveja a qualquer outra jóia. 
+Porém os fios da máquina cada vez mais estavam se iluminando e provocando fumaça. A luz se iluminou tanto que Lui e Titi fecharam os olhos. De repente ouviram um grito de Pan. Lui e Titi tentaram abrir os olhos para ver o que estava acontecendo. Viram algo terrível: um círculo parecendo um vortex estava sugando a Pan. 
+Quando correram em direção à Pan, ela já estava dentro do círculo que estava perdendo a força até se fechar, fazendo a Pan desaparecer por completo. Titi estava paralisada. Lui já achava que não tinha mais mágica naquele negócio. O que fazer? Depois de ficarem em silêncio por minutos, Lui percebeu uma coisa. A jóia ainda estava lá na plataforma.
 
 - Vou atrás dela - Lui falou pegando a jóia.
 - É perigoso. Concluo que de alguma forma o espaço foi distorcido e isso significa que ela pode não estar mais aqui hoje.
