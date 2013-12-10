@@ -297,9 +297,9 @@ var app = Sammy('#main', function() {
     this.setLocation(new_location);
   }
   
-  this.gotoPostByIndex = function(index)
+  this.gotoPostByIndex = function(index, canClose)
   {
-	if(index == currentPost)
+	if(index == currentPost && canClose != false)
 	{
 	  allMeta.closeCurrentPost();
 	  gotoLang(currentLang);
@@ -334,7 +334,7 @@ var app = Sammy('#main', function() {
   this.get('#!/lang/:lang',function()
   {
     allMeta.changeLanguage(this.params['lang']);
-	if(currentPost != null) app.gotoPostByIndex(currentPost);
+	if(currentPost != null) app.gotoPostByIndex(currentPost, false);
   });
   
   this.get('#!/', function()

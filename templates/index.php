@@ -21,6 +21,7 @@
 	  $$thumbnailUrl = "http://vision.ime.usp.br/~acmt/komputilisto/";
 	  $$postUrl = "http://vision.ime.usp.br/~acmt/komputilisto/";
 	  $$title = "";
+	  $$description = "";
 	  
 	  if(isset($$_GET['_escaped_fragment_']))
 	  {
@@ -59,6 +60,7 @@
 				  $$postUrl .= "#!/post/$$postAddress/$$lang";
 				  $$thumbnailUrl .= $$post['thumbnail'];
 				  $$title = $$post['title'];
+				  $$description = $$post['description'];
 				  
 				  break;
 				}
@@ -111,6 +113,7 @@
 	  echo("<meta property='og:image' content='$$thumbnailUrl' id='ogShareMeta'/>");
 	  echo("<meta property='og:title' content='$$title' />");
 	  echo("<meta property='og:url' content='$$postUrl' />");
+	  echo("<meta property='og:description' content='$$description' />");
 
 	?>
     <!--<meta property="shareaholic:image" content="http://vision.ime.usp.br/~acmt/komputilisto/assets/images/logo.png" id="facebookShareMeta"/>

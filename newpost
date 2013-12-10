@@ -1,0 +1,24 @@
+#!/bin/bash
+
+DATE=`date +%Y-%m-%d`
+TITLEPT=$1
+TITLEEN=$2
+TITLEEO=$3
+DESCPT=$4
+DESCEN=$5
+DESCEO=$6
+THUMB=$7
+
+FILENAMEPT=$DATE-`echo $TITLEPT | awk '{gsub(/[[:punct:]]/,"")}1' |iconv -f utf8 -t ascii//TRANSLIT | tr ' ' '-' | tr '[:upper:]' '[:lower:]'`
+FILENAMEEN=$DATE-`echo $TITLEEN | awk '{gsub(/[[:punct:]]/,"")}1' |iconv -f utf8 -t ascii//TRANSLIT | tr ' ' '-' | tr '[:upper:]' '[:lower:]'`
+FILENAMEEO=$DATE-`echo $TITLEEO | awk '{gsub(/[[:punct:]]/,"")}1' |iconv -f utf8 -t ascii//TRANSLIT | tr ' ' '-' | tr '[:upper:]' '[:lower:]'`
+
+rm -f pt-BR/blogo/$FILENAMEPT.md
+rm -f en-GB/blogo/$FILENAMEEN.md
+rm -f eo/blogo/$FILENAMEEO.md
+
+echo -e "---\ntitle: $TITLEPT\nauthor: Anderson Tavares\ndescription: $DESCPT\ntags: Zamenhoff, EASP\nmath: true\nbiblio: library.bib\ncsl: ieee-with-url.csl\nthumbnail: assets/images/$THUMB\nen-GB: $FILENAMEEN\neo: $FILENAMEEO\npt-BR: $FILENAMEPT\n---" > pt-BR/blogo/$FILENAMEPT.md
+
+echo -e "---\ntitle: $TITLEEN\nauthor: Anderson Tavares\ndescription: $DESCEN\ntags: Zamenhoff, EASP\nmath: true\nbiblio: library.bib\ncsl: ieee-with-url.csl\nthumbnail: assets/images/$THUMB\nen-GB: $FILENAMEEN\neo: $FILENAMEEO\npt-BR: $FILENAMEPT\n---" > en-GB/blogo/$FILENAMEEN.md
+
+echo -e "---\ntitle: $TITLEEO\nauthor: Anderson Tavares\ndescription: $DESCEO\ntags: Zamenhoff, EASP\nmath: true\nbiblio: library.bib\ncsl: ieee-with-url.csl\nthumbnail: assets/images/$THUMB\nen-GB: $FILENAMEEN\neo: $FILENAMEEO\npt-BR: $FILENAMEPT\n---" > eo/blogo/$FILENAMEEO.md
