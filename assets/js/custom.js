@@ -207,11 +207,13 @@ allMeta.expandPost = function(postContent, i)
   });
   if(DISQUS)
   {
+	console.log(currentLang+allMeta.getPostAddress(i));
+	console.log(window.location.href);
     DISQUS.reset({
       reload: true,
       config: function () {  
-	    this.page.identifier = currentLang+getPostAddress(i);
-	    this.page.url = windows.location.href;
+	    this.page.identifier = currentLang+allMeta.getPostAddress(i);
+	    this.page.url = window.location.href;
       }
     });
   }
@@ -229,6 +231,8 @@ allMeta.closeCurrentPost = function()
 {
   if(currentPost != null)
   {
+	$("body").append(disqusComment);
+	disqusComment.css("display","none");
     var postContent = this.getPostContentByIndex(currentPost);
     var post = postContent.parent();
     post.removeClass("tileH10");
@@ -302,7 +306,7 @@ var app = Sammy('#main', function() {
 	if(index == currentPost && canClose != false)
 	{
 	  allMeta.closeCurrentPost();
-	  gotoLang(currentLang);
+	  this.gotoLang(currentLang);
 	}
 	else
 	{
@@ -523,6 +527,7 @@ function expandPost(post, postContent)
 	    config: function () {  
 		  this.page.identifier = currentUrl.substr(1,currentUrl.length-1);
 		  this.page.url = currentPath+currentUrl.substr(1,currentUrl.length-1);
+
 	    }
 	  });
 	}
