@@ -254,13 +254,13 @@
 				</div>
 				<div class="tiles">
 					<div class="tile tileW1 tileH1">
-						<img src="assets/images/twitter_logo.svg"/>
+						<a target="_blank" href="http://www.twitter.com/anderflash"><img src="assets/images/twitter_logo.svg"/></a>
 					</div>
 					<div class="tile tileW1 tileH1">
-						<img src="assets/images/facebook_logo.svg"/>
+						<a target="_blank" href="http://www.facebook.com/anderflash"><img src="assets/images/facebook_logo.svg"/></a>
 					</div>
 					<div class="tile tileW1 tileH1">
-						<img src="assets/images/gplus_logo.svg"/>
+						<a target="_blank" href="https://plus.google.com/100007156251812593852"><img src="assets/images/gplus_logo.svg"/></a>
 					</div>
 					<div class="tile tileW1 tileH1">
 						Teste4
