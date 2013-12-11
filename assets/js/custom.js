@@ -239,6 +239,7 @@ allMeta.closeCurrentPost = function()
     post.addClass("tileH1");
     postContent.css("visibility","hidden");
     currentPost = null;
+	$("title").text("Komputilisto - Anderson Carlos Moreira Tavares");
   }
 };
 
@@ -260,19 +261,37 @@ allMeta.correctShareMeta = function(i)
 {
   var metaShareaholic = $("head").find("[property='shareaholic:image']");
   var metaTwitter 	= $("head").find("[property='twitter:image']");
+  var metaTwitterTitle 	= $("head").find("[property='twitter:title']");
+  var metaTwitterDescription 	= $("head").find("[property='twitter:description']");
   var metaOg 		= $("head").find("[property='og:image']");
   var metaOgTitle	= $("head").find("[property='og:title']");
+  var metaOgDescription	= $("head").find("[property='og:description']");
+  var metaOgURL	= $("head").find("[property='og:url']");
+  
   
   $("head").append(metaShareaholic);
   $("head").append(metaTwitter);
   $("head").append(metaOg);
   $("head").append(metaOgTitle);
+  $("head").append(metaOgDescription);
+  $("head").append(metaOgURL);
+  $("head").append(metaTwitterTitle);
+  $("head").append(metaTwitterDescription);
+  
+  
   var thumbnailUrl = currentPath + this[currentLang].posts[i].thumbnail;
   var title = this[currentLang].posts[i].title;
+  var description = this[currentLang].posts[i].description;
   metaShareaholic.attr("content",thumbnailUrl);
   metaTwitter.attr("content",thumbnailUrl);
   metaOg.attr("content",thumbnailUrl);
   metaOgTitle.attr("content",title);
+  metaOgDescription.attr("content",description);
+  metaOgURL.attr("content",window.location.href);
+  metaTwitterTitle.attr("content",title);
+  metaTwitterDescription.attr("content",description);
+  
+  $("title").text(title + " - Komputilisto - Anderson Carlos Moreira Tavares");
 }
 
 //---------------------------------------------------------------

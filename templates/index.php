@@ -20,12 +20,15 @@
 	  $$decoded = json_decode($$lang) or die('erro');
 	  $$thumbnailUrl = "http://vision.ime.usp.br/~acmt/komputilisto/";
 	  $$postUrl = "http://vision.ime.usp.br/~acmt/komputilisto/";
+	  $$pageTitle = "Komputilisto - Anderson Carlos Moreira Tavares";
 	  $$title = "";
 	  $$description = "";
 	  
 	  if(isset($$_GET['_escaped_fragment_']))
 	  {
+		echo("OI");
 		$$getParams = explode('/', $$_GET['_escaped_fragment_']);
+		
 		
 		$$title = $$getParams[2];
 		if($$getParams[1]=='lang')
@@ -61,7 +64,7 @@
 				  $$thumbnailUrl .= $$post['thumbnail'];
 				  $$title = $$post['title'];
 				  $$description = $$post['description'];
-				  
+				  $$pageTitle = $$title." - ".$$pageTitle;
 				  break;
 				}
 			  }
@@ -107,13 +110,15 @@
 		$$title = "Komputilisto - Anderson Carlos Moreira Tavares";
 	  }
 	  
-	  echo("<title>Komputilisto - Anderson Carlos Moreira Tavares</title>");
+	  echo("<title>$$pageTitle</title>");
 	  echo("<meta property='shareaholic:image' content='$$thumbnailUrl' id='facebookShareMeta'/>");
 	  echo("<meta property='twitter:image' content='$$thumbnailUrl' id='twitterShareMeta'/>");
 	  echo("<meta property='og:image' content='$$thumbnailUrl' id='ogShareMeta'/>");
 	  echo("<meta property='og:title' content='$$title' />");
 	  echo("<meta property='og:url' content='$$postUrl' />");
 	  echo("<meta property='og:description' content='$$description' />");
+	  echo("<meta property='twitter:description' content='$$description' />");
+	  echo("<meta property='twitter:title' content='$$title' />");
 
 	?>
     <!--<meta property="shareaholic:image" content="http://vision.ime.usp.br/~acmt/komputilisto/assets/images/logo.png" id="facebookShareMeta"/>
@@ -209,17 +214,21 @@
 					Aprendizado
 				</div>
 				<div class="tiles">
-					<div class="tile tileW1 tileH1" style="background:#500010">
-						<img src="assets/images/muzaiko_logo.svg"/>
-					</div>
+					<a href="http://muzaiko.info/" target="_blank">
+					  <div class="tile tileW1 tileH1" style="background:#500010">
+						  <img src="assets/images/muzaiko_logo.svg"/>
+					  </div>
+					</a>
 					<div class="tile tileW1 tileH1" style="background:#aa0000;">
 						<img src="assets/images/webgl-logo.svg"/>
 					</div>
-					<div class="tile tileW1 tileH1" style="background:#384f6f;">
-					<img src="assets/images/lernu_logo.svg"/>
-					</div>
+					<a href="http://lernu.net/" target="_blank">
+					  <div class="tile tileW1 tileH1" style="background:#384f6f;">
+						  <img src="assets/images/lernu_logo.svg"/>
+					  </div>
+					</a>
 					<div class="tile tileW1 tileH1" style="background:#500010">
-					  <img src="assets/images/muzaiko_logo.svg"/>
+					    <img src="assets/images/yahoo_answers_logo.svg"/>
 					</div>
 					<div class="tile tileW1 tileH1">
 					Teste5
