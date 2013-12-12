@@ -1,0 +1,70 @@
+{
+"apps":
+  [{
+    "komponantoj":
+    {
+      "l":"4",
+      "i":
+      {
+        "vortaro":{
+          "tpt":"Dicionário (EO)",
+          "teo":"Vortaro (EO)",
+          "ten":"Dictionary (EO)",
+          "c":"#505050",
+          "f":
+          {
+            "l":"1","a":"1","s":""
+          },
+          "m":
+          {
+            "l":"4","a":"4","s":""
+          }
+        },
+        "yahoo_respondoj":{
+          "tpt":"Yahoo Respostas",
+          "teo":"Yahoo Respondoj",
+          "ten":"Yahoo Answers",
+          "c":"#505050",
+          "f":
+          {
+            "l":"1", "a":"1","s":"
+            <a href='#!/app/yahoo'><img src='assets/images/yahoo_answers_logo.svg'></a>
+			<div>Yahoo Respostas</div>"
+          },
+          "m":
+          {
+            "l":"4","a":"6","s":"
+            <div style='width: 100px;display: inline-block;'></div>
+            <div id='close' class='closeButton' onclick='allMeta.closeApp(event);'>
+			  <img src='assets/images/close.svg'>
+			</div>
+			<iframe style='border:0px;margin-top:20px;width:235px; height:353px;text-align:center;vertical-align:middle' src='../tiles/yahoo/'></iframe>"
+          }
+        },
+        "muzaiko":{
+          "tpt":"Muzaiko",
+          "teo":"Muzaiko",
+          "ten":"Muzaiko",
+          "c":"#505050",
+          "f":
+          {
+            "l":"1", "a":"1","s":"
+            <a href='#!/app/muzaiko' target='_blank'>
+				<img src='assets/images/muzaiko_logo.svg'>
+				<div>Muzaiko</div>
+			</a>"
+          },
+          "m":
+          {
+            "l":"4","a":"6","s":"
+            <div style='width: 100px;display: inline-block;'></div>
+            <div id='close' class='closeButton' onclick='allMeta.closeApp(event);'>
+			  <img src='assets/images/close.svg'>
+			</div>
+			<iframe style='border:0px;margin-top:20px;width:235px; height:353px;text-align:center;vertical-align:middle' src='../tiles/yahoo/'></iframe>"
+          }
+        }
+      }
+    }
+  }]
+}

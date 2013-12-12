@@ -1,24 +1,24 @@
 {
 	"en-GB":{
 		"categoryBLOGO":"Blog",
-		"categoryLERNADO":"Learning",
-		"categoryPROGRAMAROJ":"Apps",
+		"categoryLERNADO":"Academia",
+		"categoryPROGRAMAROJ":"Esperanto",
 		"categoryPRIMI":"About Me",
 		"categoryPROJEKTOJ":"Projects",
 		"POWEREDBY":"Powered by"
 	},
 	"pt-BR":{
 		"categoryBLOGO":"Blog",
-		"categoryLERNADO":"Aprendizado",
-		"categoryPROGRAMAROJ":"Programas",
+		"categoryLERNADO":"Academia",
+		"categoryESPERANTO":"Esperanto",
 		"categoryPRIMI":"Sobre Mim",
 		"categoryPROJEKTOJ":"Projetos",
 		"POWEREDBY":"Feito por"
 	},
 	"eo":{
 		"categoryBLOGO":"Blogo",
-		"categoryLERNADO":"Lernado",
-		"categoryPROGRAMAROJ":"Programaroj",
+		"categoryLERNADO":"Akademio",
+		"categoryPROGRAMAROJ":"Esperanto",
 		"categoryPRIMI":"Pri Mi",
 		"categoryPROJEKTOJ":"Projektoj",
 		"POWEREDBY":"Farita de"

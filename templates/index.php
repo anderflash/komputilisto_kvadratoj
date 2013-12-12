@@ -1,6 +1,20 @@
 <html>
   <meta charset="UTF-8">
   <head>
+	<script type="text/javascript">
+	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = 'andersonvision'; // required: replace example with your forum shortname
+	<?php
+	  echo("var disqus_url = window.location.href;");
+	  echo("var disqus_identifier = '$$lang$$postAddress';");
+	?>
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = false;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
 	<?php
 	  error_reporting(E_ALL);
 	  ini_set('display_errors', 1);
@@ -23,10 +37,11 @@
 	  $$pageTitle = "Komputilisto - Anderson Carlos Moreira Tavares";
 	  $$title = "";
 	  $$description = "";
+	  $$postAddress = "";
+	  $$lang = "pt-BR";
 	  
 	  if(isset($$_GET['_escaped_fragment_']))
 	  {
-		echo("OI");
 		$$getParams = explode('/', $$_GET['_escaped_fragment_']);
 		
 		
@@ -209,77 +224,88 @@
 					$body$
 				</div>
 			</div>
-			<div class="category tilesW4">
+			<div class="category tilesW5">
 				<div class="categorytitle" id="categoryLERNADO">
 					Aprendizado
 				</div>
 				<div class="tiles">
-					<a href="http://muzaiko.info/" target="_blank">
-					  <div class="tile tileW1 tileH1" style="background:#500010">
-						  <img src="assets/images/muzaiko_logo.svg"/>
-					  </div>
-					</a>
-					<div class="tile tileW1 tileH1" style="background:#aa0000;">
-						<img src="assets/images/webgl-logo.svg"/>
+					<div class="tile tileW1 tileH1" style="background:#aa0000;" id="appwebgl">
+						<a href="#!/app/webgl"><img src="assets/images/webgl-logo.svg"/></a>
 					</div>
-					<a href="http://lernu.net/" target="_blank">
-					  <div class="tile tileW1 tileH1" style="background:#384f6f;">
-						  <img src="assets/images/lernu_logo.svg"/>
-					  </div>
-					</a>
-					<div class="tile tileW1 tileH1" style="background:#500010">
-					    <img src="assets/images/yahoo_answers_logo.svg"/>
-					</div>
-					<div class="tile tileW1 tileH1">
-					Teste5
-					</div>
-				</div>
-      </div>
-			<div class="category tilesW4">
-				<div class="categorytitle" id="categoryPROGRAMAROJ">
-					Programaroj
-				</div>
-				<div class="tiles">
-					<div class="tile tileW1 tileH2">
-					Teste1
-					</div>
-					<div class="tile tileW1 tileH1">
-					Teste2
-					</div>
-					<div class="tile tileW1 tileH1">
-					Teste3
-					</div>
-					<div class="tile tileW1 tileH1">
-					Teste4
-					</div>
-					<div class="tile tileW1 tileH1">
-					Teste5
+					<div class="tile tileW1 tileH1 clicavel icon" style="background:#966c52">
+					  <a href="http://www.wikicfp.com/" target="_blank">
+						  <img src="assets/images/wikicfp-logo.svg"/>
+						  <div>WikiCFP</div>
+					  </a>
 					</div>
 				</div>
 			</div>
-			<div class="category tilesW4">
+			<div class="category tilesW5">
+				<div class="categorytitle" id="categoryESPERANTO" >
+					Programaroj
+				</div>
+				<div class="tiles">
+					<a href="http://lernu.net/" target="_blank">
+					  <div class="tile tileW1 tileH1 clicavel" style="background:#384f6f;">
+						  <img src="assets/images/lernu_logo.svg"/>
+					  </div>
+					</a>
+					<div class="tile tileW1 tileH1 clicavel icon" style="background:#500010" id="appmuzaiko">
+					  <a href="#!/app/muzaiko" target="_blank">
+						  <img src="assets/images/muzaiko_logo.svg"/>
+						  <div>Muzaiko</div>
+					  </a>
+					</div>
+					<div class="tile tileW1 tileH1 clicavel icon" style="background:#509910">
+					  <a href="http://www.podkasto.net/" target="_blank">
+						  <img src="assets/images/varsoviavento_logo.svg"/>
+						  <div>Varsovia Vento</div>
+					  </a>
+					</div>
+					<div class="tile tileW1 tileH1 clicavel icon" style="background:#C0A080">
+					  <a href="http://edukado.net/" target="_blank">
+						  <img src="assets/images/edukado_logo.png"/>
+						  <div>Edukado</div>
+					  </a>
+					</div>
+					<div class="tile tileW1 tileH1 clicavel icon" style="background:#505010">
+					  <a href="http://eo.radiovaticana.va/" target="_blank">
+						  <img src="assets/images/radiovatikana_logo.svg"/>
+						  <div>Rd. Vatikana</div>
+					  </a>
+					</div>
+					<div class="tile tileW1 tileH1 icon" style="background:#500050" id="appyahoo">
+					    <a href="#!/app/yahoo"><img src="assets/images/yahoo_answers_logo.svg"/></a>
+					    <div>Yahoo Respostas</div>
+					</div>
+				</div>
+			</div>
+			<div class="category tilesW5">
 				<div class="categorytitle" id="categoryPRIMI">
 					Pri Mi
 				</div>
 				<div class="tiles">
-					<div class="tile tileW1 tileH1">
+					<div class="tile tileW1 tileH1 clicavel">
 						<a target="_blank" href="http://www.twitter.com/anderflash"><img src="assets/images/twitter_logo.svg"/></a>
 					</div>
-					<div class="tile tileW1 tileH1">
+					<div class="tile tileW1 tileH1 clicavel">
 						<a target="_blank" href="http://www.facebook.com/anderflash"><img src="assets/images/facebook_logo.svg"/></a>
 					</div>
-					<div class="tile tileW1 tileH1">
-						<a target="_blank" href="https://plus.google.com/100007156251812593852"><img src="assets/images/gplus_logo.svg"/></a>
+					<div class="tile tileW1 tileH1 clicavel">
+						<a target="_blank" href="https://plus.google.com/+AndersonTavaresBR"><img src="assets/images/gplus_logo.svg"/></a>
 					</div>
-					<div class="tile tileW1 tileH1">
-						Teste4
+					<div class="tile tileW1 tileH1 clicavel" style="background:white;">
+						<a target="_blank" href="https://github.com/anderflash"><img src="assets/images/github-logo.svg"/></a>
 					</div>
-					<div class="tile tileW1 tileH1">
-						Teste5
+					<div class="tile tileW1 tileH1 clicavel">
+						<a target="_blank" href="https://linkedin.com/in/andersontavares"><img src="assets/images/linkedin-logo.svg"/></a>
+					</div>
+					<div class="tile tileW1 tileH1 clicavel" style="background:green;" id="primiemail">
+						<a href="#!/primi/email"><img src="assets/images/email-logo.svg"/></a>
 					</div>
 				</div>
 			</div>
-			<div class="category tilesW4">
+			<div class="category tilesW5">
 				<div class="categorytitle" id="categoryPROJEKTOJ">
 					Projetos
 				</div>
@@ -293,12 +319,6 @@
 					<div class="tile tileW1 tileH1">
 						<img src="assets/images/anamorphism-swimming.jpg" style="width:64px; height:64px;"/>
 					</div>
-					<div class="tile tileW1 tileH1">
-						Teste4
-					</div>
-					<div class="tile tileW1 tileH1">
-						Teste5
-					</div>
 				</div>
 			</div>
 		</div>
@@ -306,28 +326,20 @@
 	  <div class="logo" onclick="app.restart()">
       </div>
       <div class="langs">
-		  <img src="assets/images/Brazil.png" onclick="app.gotoLang('pt-BR');"/>
-		  <img src="assets/images/United_Kingdom.png" onclick="app.gotoLang('en-GB');"/>
-		  <img src="assets/images/esperanto.svg" onclick="app.gotoLang('eo');"/>
+		  <img src="assets/images/Brazil.png" class="clicavel" id="flagpt-BR" onclick="app.gotoLang('pt-BR');"/>
+		  <img src="assets/images/United_Kingdom.png" class="clicavel" id="flagen-GB"  onclick="app.gotoLang('en-GB');"/>
+		  <img src="assets/images/esperanto.svg" class="clicavel" id="flageo" onclick="app.gotoLang('eo');"/>
       </div>
+      <span class="rss">
+		<a href="$sitePath$/rss.xml" target="_blank" onclick="event.preventDefault();window.open('$sitePath$/rss.xml');"><img src="assets/images/rss-logo.svg"></a>
+      </span>
+      <input id="buscarInput" type="text" class="" name="q" placeholder="Serĉo" onkeypress="serĉaKlavoPremita(event)">
     </div>
     <footer class="copyright"><span id="POWEREDBY">Farita de</span> <a href="http://www.ime.usp.br/~acmt" target="_blank">Anderson Tavares</a> - 2013 <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></footer>
     <div id="disqusComment">
 		<div id="disqus_thread"></div>
 		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-		<script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'andersonvision'; // required: replace example with your forum shortname
-		
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-		</script>
     </div>
-    
   </body>
 </html>

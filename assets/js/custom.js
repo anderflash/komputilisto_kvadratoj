@@ -157,7 +157,12 @@ allMeta.changeLanguage = function(lang)
     {
 	$("#"+key).text(interfaceMeta[key]);
     }
+    if(currentLang) $("#flag"+currentLang).removeClass("clicado");
     currentLang = lang;
+	$("#flag"+currentLang).addClass("clicado");
+	if(currentLang == 'pt-BR') $("#buscarInput").attr('placeholder','Buscar');
+	if(currentLang == 'eo') $("#buscarInput").attr('placeholder','Serĉo');
+	if(currentLang == 'en-GB') $("#buscarInput").attr('placeholder','Search');
   }
 };
 
@@ -214,6 +219,7 @@ allMeta.expandPost = function(postContent, i)
       config: function () {  
 	    this.page.identifier = currentLang+allMeta.getPostAddress(i);
 	    this.page.url = window.location.href;
+		this.language = currentLang.replace('-','_');
       }
     });
   }
@@ -293,7 +299,15 @@ allMeta.correctShareMeta = function(i)
   
   $("title").text(title + " - Komputilisto - Anderson Carlos Moreira Tavares");
 }
-
+allMeta.closeApp = function(event)
+{
+  var app = $(event.currentTarget).parent();
+  app.removeClass("tileH6");
+  app.removeClass("tileW5");
+  app.addClass("tileH1");
+  app.addClass("tileW1");
+  app.html("");
+}
 //---------------------------------------------------------------
 // ------------------------SAMMY---------------------
 // define a new Sammy.Application bound to the #main element selector
@@ -348,6 +362,45 @@ var app = Sammy('#main', function() {
     this.setLocation(new_location);
   }
   
+  this.get('#!/app/webgl', function(valor) {
+	var webgl = $('#app'+'webgl');
+	webgl.removeClass('tileH1');
+	webgl.removeClass('tileW1');
+	webgl.addClass('tileW5');
+	webgl.addClass('tileH5');
+  });
+  
+  this.get('#!/primi/email', function(valor) {
+	var email = $('#primi'+'email');
+	//webgl.removeClass('tileH1');
+	email.removeClass('tileW1');
+	email.addClass('tileW5');
+	email.html("acmt [AT] ime [DOT] usp [DOT] br<br><a style='color:white;' href='http://pgp.mit.edu:11371/pks/lookup?op=get&amp;search=0xDFF7029D987E5C26' target='_blank'><i class='icon-key'></i>gpg key 0xDFF7029D987E5C26</a>");
+ 	email.css("text-align","center");
+	email.removeClass('clicavel');
+	//webgl.addClass('tileH1');
+  });
+  this.get('#!/app/muzaiko', function(valor) {
+	var muzaiko = $('#app'+'muzaiko');
+	muzaiko.removeClass('tileW1');
+	muzaiko.addClass('tileW5');
+	muzaiko.parent().prepend(muzaiko);
+	
+  });
+  this.get('#!/app/yahoo', function(valor) {
+	var yahoo = $('#app'+'yahoo');
+	yahoo.removeClass('tileH1');
+	yahoo.removeClass('tileW1');
+	yahoo.addClass('tileW4');
+	yahoo.addClass('tileH6');
+	yahoo.parent().prepend(yahoo);
+	yahoo.html('<iframe style="border:0px;margin-top:20px;width:235px; height:353px;text-align:center;vertical-align:middle" src="../tiles/yahoo/"></iframe>');
+	yahoo.css('text-align','center');
+	yahoo.css('vertical-align','middle');
+	var closeButton = $("<div style='width: 100px;display: inline-block;'></div><div id='close' class='closeButton' onclick='allMeta.closeApp(event);'><img src='assets/images/close.svg'/></close></div>");
+	yahoo.prepend(closeButton);
+  });
+  
   this.get('#!/post/:address/:lang', function(valor) {
     allMeta.changeLanguage(this.params['lang']);
 	allMeta.correctShareMeta(allMeta.getPostIndex(this.params['address']));
@@ -362,6 +415,11 @@ var app = Sammy('#main', function() {
   
   this.get('#!/', function()
   {
+  });
+  
+  this.get('rss.xml', function()
+  {
+	
   });
   
   this.get('', function()
@@ -575,7 +633,10 @@ function language(lang)
   if(lang != currentLang)
   {
     if(currentLang)
+	{
       var post = searchPost(currentUrl, currentLang);
+	  $("#flag"+currentLang).removeClass("clicado");
+	}
     else
       var post = searchPost(currentUrl, lang);
     currentLang = lang;
@@ -622,6 +683,7 @@ function language(lang)
     
 		
     window.history.replaceState({lang:currentLang, post:currentUrl},'',currentPath+"?lingvo="+currentLang+"&malfermita="+(currentUrl||"none")+thumbnailPart+hash);
+	$("#flag"+currentLang).addClass("clicado");
   }
 }
 
