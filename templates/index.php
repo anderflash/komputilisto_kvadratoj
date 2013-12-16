@@ -184,6 +184,8 @@
   	<!-- styles needed by jScrollPane -->
 	<link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
 	<link type="text/css" href="css/custom.css" rel="stylesheet" media="all" />
+	<link type="text/css" href="css/syntax.css" rel="stylesheet" />
+        
 	<!-- latest jQuery direct from google's CDN -->
 	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
 	<!-- the mousewheel plugin - optional to provide mousewheel support -->
@@ -191,6 +193,7 @@
 	<!-- the jScrollPane script -->
 	<script type="text/javascript" src="assets/js/jquery.jscrollpane.min.js"></script>
 	<script type="text/javascript" src="assets/js/custom.js"></script>
+	
 	<!-- MATHJAX -->
     <script type="text/javascript"
 	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -231,6 +234,9 @@
 				<div class="tiles">
 					<div class="tile tileW1 tileH1" style="background:#aa0000;" id="appwebgl">
 						<a href="#!/app/webgl"><img src="assets/images/webgl-logo.svg"/></a>
+					</div>
+					<div class="tile tileW1 tileH1" style="background:#537f9a;" id="appopengl">
+						<a href="#!/app/opengl"><img src="assets/images/opengl-logo.svg"/></a>
 					</div>
 					<div class="tile tileW1 tileH1 clicavel icon" style="background:#966c52">
 					  <a href="http://www.wikicfp.com/" target="_blank">
