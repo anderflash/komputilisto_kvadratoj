@@ -339,9 +339,9 @@
       <span class="rss">
 		<a href="$sitePath$/rss.xml" target="_blank" onclick="event.preventDefault();window.open('$sitePath$/rss.xml');"><img src="assets/images/rss-logo.svg"></a>
       </span>
-      <input id="buscarInput" type="text" class="" name="q" placeholder="Serĉo" onkeypress="serĉaKlavoPremita(event)">
+      <!--<input id="buscarInput" type="text" class="" name="q" placeholder="Serĉo" onkeypress="serĉaKlavoPremita(event)">-->
     </div>
-    <footer class="copyright"><span id="POWEREDBY">Farita de</span> <a href="http://www.ime.usp.br/~acmt" target="_blank">Anderson Tavares</a> - 2013 <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></footer>
+    <footer class="copyright"><span id="POWEREDBY">Farita de</span> <a href="http://www.ime.usp.br/~acmt" target="_blank">Anderson Tavares</a> - 2014 <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></footer>
     <div id="disqusComment">
 		<div id="disqus_thread"></div>
 		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
