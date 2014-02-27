@@ -214,7 +214,7 @@
   <body>
 		<div class="content" id="main">
 			
-			<div class="category tilesW5">
+			<div class="category tilesW6">
 				<div class="categorytitle" id="categoryBLOGO">
 				  Blog
 				</div>
@@ -227,7 +227,7 @@
 					$body$
 				</div>
 			</div>
-			<div class="category tilesW5">
+			<div class="category tilesW4">
 				<div class="categorytitle" id="categoryLERNADO">
 					Aprendizado
 				</div>
@@ -246,7 +246,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="category tilesW5">
+			<div class="category tilesW4">
 				<div class="categorytitle" id="categoryESPERANTO" >
 					Programaroj
 				</div>
@@ -286,7 +286,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="category tilesW5">
+			<div class="category tilesW4">
 				<div class="categorytitle" id="categoryPRIMI">
 					Pri Mi
 				</div>
@@ -311,7 +311,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="category tilesW5">
+			<div class="category tilesW4">
 				<div class="categorytitle" id="categoryPROJEKTOJ">
 					Projetos
 				</div>

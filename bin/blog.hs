@@ -43,6 +43,11 @@ main = hakyllWith config $ do
     match "assets/js/*" $ do
         route   idRoute
         compile copyFileCompiler
+        
+    -- Copy webgl demos
+    match "webgl/**" $ do
+        route   idRoute
+        compile copyFileCompiler
 
     -- Render posts
     matchLanguage "en-GB" tags
